@@ -4,8 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80603d3-a46c-409b-a468-c296141877ec" name="Changes" comment="[Feat] 框架搭建 - 模块梳理">
+    <list default="true" id="f80603d3-a46c-409b-a468-c296141877ec" name="Changes" comment="[Feat] 框架搭建 - git忽略">
+      <change afterPath="$PROJECT_DIR$/.idea/template_project_base_springcloudalibaba.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/org/zhaoxuan/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/device/src/main/java/org/zhaoxuan/DeviceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/device/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/display/src/main/java/org/zhaoxuan/DisplayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/display/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/org/zhaoxuan/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/org/zhaoxuan/ServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sys/src/main/java/org/zhaoxuan/SysApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sys/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/device/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/display/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/display/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys/src/main/java/org/zhaoxuan/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +56,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2T6Fl8wp70WeK1b4BYdz83YSV3e" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,23 +66,37 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "E:/HardStone.iCoding/GITHUB/template_project_base_springcloudalibaba",
+    "last_opened_file_path": "E:/HardStone.iCoding/GITHUB/template_project_base_springcloudalibaba/sys/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.35517243",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "94679e5aabb0532cd32e4a39f8532f50",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HardStone.iCoding\GITHUB\template_project_base_springcloudalibaba\sys\src" />
+      <recent name="E:\HardStone.iCoding\GITHUB\template_project_base_springcloudalibaba\service\src" />
+      <recent name="E:\HardStone.iCoding\GITHUB\template_project_base_springcloudalibaba\gateway\src" />
+      <recent name="E:\HardStone.iCoding\GITHUB\template_project_base_springcloudalibaba\gateway\src\main" />
+      <recent name="E:\HardStone.iCoding\GITHUB\template_project_base_springcloudalibaba\device\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.zhaoxuan" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +107,8 @@
       <updated>1690355772080</updated>
       <workItem from="1690355773103" duration="1687000" />
       <workItem from="1690357474231" duration="112000" />
+      <workItem from="1690357605187" duration="10842000" />
+      <workItem from="1690434072112" duration="7794000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat] 框架搭建 - 模块梳理">
       <option name="closed" value="true" />
@@ -72,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690357417142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[Feat] 框架搭建 - git忽略">
+      <option name="closed" value="true" />
+      <created>1690357826362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690357826362</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Feat] 框架搭建 - 模块梳理" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 框架搭建 - 模块梳理" />
+    <MESSAGE value="[Feat] 框架搭建 - git忽略" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 框架搭建 - git忽略" />
   </component>
 </project>

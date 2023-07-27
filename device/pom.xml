@@ -6,12 +6,20 @@
 
     <groupId>org.zhaoxuan</groupId>
     <artifactId>device</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.zhaoxuan</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0-RELEASE</version>
+        </dependency>
+    </dependencies>
 
 </project>
