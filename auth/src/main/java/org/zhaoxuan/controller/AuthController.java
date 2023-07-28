@@ -11,9 +11,8 @@ import org.zhaoxuan.business.out.*;
 @Api("鉴权服务")
 @RestController()
 @RequestMapping("/auth")
-@SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
-public class AuthCotroller {
+public class AuthController {
 
     @ApiOperation("登录")
     @PostMapping("/login")

@@ -54,6 +54,7 @@
         <logback.versin>1.4.8</logback.versin>
 
         <knife4j.version>3.0.3</knife4j.version>
+        <springfox-starter.version>3.0.0</springfox-starter.version>
 
         <commons-fileupload.version>1.5</commons-fileupload.version>
         <snakeyaml.version>2.0</snakeyaml.version>
@@ -151,6 +152,12 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-micro-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox-starter.version}</version>
             </dependency>
 
             <dependency>

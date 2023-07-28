@@ -9,5 +9,5 @@ import lombok.*;
 @AllArgsConstructor
 @ApiModel("连接激活请求")
 @SuppressWarnings("unused")
-public class ActiveRequest {
+public class ConnectRequest {
 }

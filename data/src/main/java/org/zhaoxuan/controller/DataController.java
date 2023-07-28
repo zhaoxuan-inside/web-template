@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "组织管理")
+@Api(tags = "数据管理")
 @RestController
-@RequestMapping("/organization")
+@RequestMapping("/data")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
-public class OrganizationController {
+public class DataController {
+
 
 
 
