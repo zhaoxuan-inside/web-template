@@ -1,47 +1,40 @@
-/.idea/.gitignore
-/algorithm/.gitignore
-/auth/.gitignore
-/common/.gitignore
-/device/.gitignore
-/display/.gitignore
-/gateway/.gitignore
-/parent/.gitignore
-/service/.gitignore
-/sys/.gitignore
-/user/.gitignore
-/auth/src/main/java/org/zhaoxuan/AuthApplication.java
-/auth/src/main/resources/bootstrap.yml
-/device/src/main/resources/bootstrap.yml
-/display/src/main/resources/bootstrap.yml
-/gateway/src/main/resources/bootstrap.yml
-/service/src/main/resources/bootstrap.yml
-/sys/src/main/resources/bootstrap.yml
-/user/src/main/resources/bootstrap.yml
-/.idea/compiler.xml
-/device/src/main/java/org/zhaoxuan/DeviceApplication.java
-/display/src/main/java/org/zhaoxuan/DisplayApplication.java
-/.idea/encodings.xml
-/gateway/src/main/java/org/zhaoxuan/GatewayApplication.java
-/.idea/jarRepositories.xml
-/algorithm/src/main/java/org/zhaoxuan/Main.java
-/.idea/misc.xml
-/.idea/modules.xml
-/algorithm/pom.xml
-/auth/pom.xml
-/common/pom.xml
-/device/pom.xml
-/display/pom.xml
-/gateway/pom.xml
-/parent/pom.xml
-/service/pom.xml
-/sys/pom.xml
-/user/pom.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/README.md
-/service/src/main/java/org/zhaoxuan/ServiceApplication.java
-/sys/src/main/java/org/zhaoxuan/SysApplication.java
-/.idea/template_project_base_springcloudalibaba.iml
-/.idea/uiDesigner.xml
-/user/src/main/java/org/zhaoxuan/UserApplication.java
-/.idea/vcs.xml
-/.idea/workspace.xml
+# Compiled class file
+*.class
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Intellij
+*.ipr
+*.iml
+*.iws
+.idea/
+
+# Maven
+target/
+
+# Gradle
+build
+.gradle
+
+# Log file
+*.log
+log/
+
+# out
+**/out/
+
+# Mac
+.DS_Store
+
+# others
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+*.pid
+*.orig
+temp/

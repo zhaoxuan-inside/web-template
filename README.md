@@ -1,0 +1,2 @@
+# common_project_base_springcloudalibaba
+基于SpringCloudAlibaba的通用项目模板
