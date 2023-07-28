@@ -1,2 +1,4 @@
-package org.zhaoxuan.exception;public class TokenException {
+package org.zhaoxuan.exception;
+
+public class TokenException extends CustomException {
 }

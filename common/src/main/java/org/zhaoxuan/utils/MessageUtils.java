@@ -1,8 +1,9 @@
-package com.ebupt.ysx.middle.common.util;
+package org.zhaoxuan.utils;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 
+@SuppressWarnings("unused")
 public class MessageUtils {
 
     private final MessageSource messageSource;

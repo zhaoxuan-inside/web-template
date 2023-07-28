@@ -1,2 +1,5 @@
-package org.zhaoxuan.utils;public class ResponseBuilderUtil {
+package org.zhaoxuan.utils;
+
+
+public class ResponseBuilderUtil {
 }

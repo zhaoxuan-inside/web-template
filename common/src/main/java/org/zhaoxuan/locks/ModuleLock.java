@@ -1,2 +1,4 @@
-package org.zhaoxuan.locks;public class ModuleLock {
+package org.zhaoxuan.locks;
+
+public class ModuleLock {
 }

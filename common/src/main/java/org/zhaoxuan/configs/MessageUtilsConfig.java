@@ -1,21 +1,18 @@
-package com.ebupt.ysx.middle.auth.common.config;
+package org.zhaoxuan.configs;
 
-import com.ebupt.ysx.middle.common.util.MessageUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.zhaoxuan.utils.MessageUtils;
 
 @Configuration
-@RequiredArgsConstructor(onConstructor = @__({ @Autowired}))
+@RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class MessageUtilsConfig {
 
     private final MessageSource messageSource;
 
-    /**
-     * redisson bean
-     */
     @Bean
     public MessageUtils messageUtils() {
         return new MessageUtils(messageSource);

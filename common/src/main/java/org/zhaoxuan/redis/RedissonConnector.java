@@ -4,6 +4,7 @@ import cn.hutool.core.util.ObjectUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;
+import org.redisson.api.RedissonClient;
 import org.redisson.config.ClusterServersConfig;
 import org.redisson.config.Config;
 import org.redisson.config.SentinelServersConfig;
@@ -15,14 +16,14 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
-public class RedissonClient {
+public class RedissonConnector {
 
     private final RedisSetting redisSetting;
 
     private static final String REDIS_CONN_PREFIX = "redis://";
 
     @Bean
-    public org.redisson.api.RedissonClient getRedissonClient() {
+    public RedissonClient getRedissonClient() {
         Config config = new Config();
 
         String[] nodes;

@@ -1,8 +1,8 @@
-package org.zhaoxuan.utils;
+package org.zhaoxuan.exception;
 
 import cn.hutool.core.util.ObjectUtil;
-import org.zhaoxuan.exception.CustomException;
 
+@SuppressWarnings("unused")
 public class ExceptionDecider {
 
     public static void ifNull(Object obj, String code)
@@ -19,6 +19,18 @@ public class ExceptionDecider {
         }
     }
 
-    public static void 
+    public static void ifTrue(boolean expression, String code)
+            throws CustomException {
+        if (expression) {
+            throw new CustomException(code, false);
+        }
+    }
+
+    public static void ifTrue(boolean expression, String code, boolean ifReport)
+            throws CustomException {
+        if (expression) {
+            throw new CustomException(code, ifReport);
+        }
+    }
 
 }

@@ -1,2 +1,9 @@
-package org.zhaoxuan.constants.HeaderConstants;public class HeaderConstants {
+package org.zhaoxuan.constants;
+
+public interface HeaderConstants {
+
+    String TRACE_ID = "TRACE_ID";
+    String TOKEN = "TOKEN";
+    String TIMESTAMP = "TIMESTAMP";
+
 }
