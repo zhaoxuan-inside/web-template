@@ -49,8 +49,7 @@
 
         <hutool.version>5.8.20</hutool.version>
         <javassist.version>3.29.2-GA</javassist.version>
-        <jackson.version>2.15.2</jackson.version>
-        <fastjson.version>2.0.36</fastjson.version>
+        <json-starter.version>3.1.1</json-starter.version>
 
         <sl4j-api.version>2.0.7</sl4j-api.version>
         <logback.versin>1.4.8</logback.versin>
@@ -145,15 +144,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-json</artifactId>
+                <version>${json-starter.version}</version>
             </dependency>
 
             <dependency>

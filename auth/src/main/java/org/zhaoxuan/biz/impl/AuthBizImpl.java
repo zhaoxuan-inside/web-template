@@ -12,6 +12,11 @@ import org.zhaoxuan.business.out.*;
 public class AuthBizImpl implements AuthBiz {
 
     @Override
+    public VerifyCodeResponse verifyCode() {
+        return null;
+    }
+
+    @Override
     public LoginResonse login(LoginRequest request) {
         return null;
     }

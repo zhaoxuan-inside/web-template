@@ -17,6 +17,12 @@ public class AuthController {
 
     private final AuthBiz authBiz;
 
+    @ApiOperation("验证码")
+    @PostMapping("/code")
+    public VerifyCodeResponse verifyCode() {
+        return authBiz.verifyCode();
+    }
+
     @ApiOperation("登录")
     @PostMapping("/login")
     public LoginResonse login(@RequestBody @Validated LoginRequest request) {
