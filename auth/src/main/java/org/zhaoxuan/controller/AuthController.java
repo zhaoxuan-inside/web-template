@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.zhaoxuan.biz.AuthBiz;
 import org.zhaoxuan.business.in.*;
 import org.zhaoxuan.business.out.*;
 
@@ -14,22 +15,24 @@ import org.zhaoxuan.business.out.*;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class AuthController {
 
+    private final AuthBiz authBiz;
+
     @ApiOperation("登录")
     @PostMapping("/login")
     public LoginResonse login(@RequestBody @Validated LoginRequest request) {
-        return null;
+        return authBiz.login(request);
     }
 
     @ApiOperation("登出")
     @DeleteMapping("/logout")
     public void logout(@RequestBody @Validated LogoutRequest request) {
-
+        authBiz.logout(request);
     }
 
     @ApiOperation("info")
     @GetMapping("/info")
     public LoginInfoResonse info() {
-        return null;
+        return authBiz.info();
     }
 
 }

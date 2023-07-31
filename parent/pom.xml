@@ -25,6 +25,7 @@
         <module>../sys</module>
         <module>../algorithm</module>
         <module>../device</module>
+        <module>../data</module>
     </modules>
 
     <properties>
@@ -47,6 +48,7 @@
         <jwt.version>4.4.0</jwt.version>
 
         <hutool.version>5.8.20</hutool.version>
+        <javassist.version>3.29.2-GA</javassist.version>
         <jackson.version>2.15.2</jackson.version>
         <fastjson.version>2.0.36</fastjson.version>
 
@@ -134,6 +136,12 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
             </dependency>
 
             <dependency>
