@@ -6,7 +6,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@Api("BaseResponse")
+//// @Api("BaseResponse")
 public class BaseResponse {
 
     // @ApiModelProperty("响应码")

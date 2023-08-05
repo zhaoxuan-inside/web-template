@@ -17,6 +17,7 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @ComponentScan
+@SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class GatewayFilter implements GlobalFilter, Ordered {
 

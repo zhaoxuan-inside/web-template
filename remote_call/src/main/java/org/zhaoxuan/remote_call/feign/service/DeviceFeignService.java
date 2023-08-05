@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
 @RefreshScope
+@SuppressWarnings("unused")
 @FeignClient(name = "device", configuration = FeignInterceptor.class)
 @RequestMapping("/device")
 public interface DeviceFeignService {

@@ -1,5 +1,6 @@
 package org.zhaoxuan.common.constants;
 
+@SuppressWarnings("unused")
 public interface CommonResponseCodeConstant {
 
     String VALIDATE_LENGTH_VERIFY_CODE = "VL00001";

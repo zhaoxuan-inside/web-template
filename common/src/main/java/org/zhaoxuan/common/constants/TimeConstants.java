@@ -1,5 +1,6 @@
 package org.zhaoxuan.common.constants;
 
+@SuppressWarnings("unused")
 public interface TimeConstants {
 
     long ONE_SECOND = 1000;

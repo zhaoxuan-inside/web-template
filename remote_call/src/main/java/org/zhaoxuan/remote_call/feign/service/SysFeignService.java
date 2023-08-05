@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
 @RefreshScope
+@SuppressWarnings("unused")
 @FeignClient(name = "sys", configuration = FeignInterceptor.class)
 @RequestMapping("/sys")
 public interface SysFeignService {

@@ -25,6 +25,7 @@ import java.util.*;
 @Slf4j
 @Aspect
 @Component
+@SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class CommonLogback {
 

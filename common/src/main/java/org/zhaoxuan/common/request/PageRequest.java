@@ -6,7 +6,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@Api("分页请求")
+//// @Api("分页请求")
 public class PageRequest {
 
 //    // @ApiModelProperty("分页起始id，默认不传为-1")

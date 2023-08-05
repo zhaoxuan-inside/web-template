@@ -7,6 +7,7 @@ import org.zhaoxuan.common.constants.HeaderConstants;
 
 import java.util.Enumeration;
 
+@SuppressWarnings("unused")
 public class AnalyseRequestHeaderUtil {
 
     public static HeaderBean getHeaderBean(HttpServletRequest request) {

@@ -1,5 +1,6 @@
 package org.zhaoxuan.common.constants;
 
+@SuppressWarnings("unused")
 public interface HeaderConstants {
 
     String TRACE_ID = "TRACE_ID";

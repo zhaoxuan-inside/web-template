@@ -6,6 +6,7 @@ import org.slf4j.MDC;
 import org.springframework.web.context.request.*;
 import org.zhaoxuan.common.constants.HeaderConstants;
 
+@SuppressWarnings("unused")
 public class FeignInterceptor implements RequestInterceptor {
 
     @Override

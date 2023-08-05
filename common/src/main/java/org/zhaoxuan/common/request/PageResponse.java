@@ -6,7 +6,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@Api("分页响应")
+//// @Api("分页响应")
 public class PageResponse<T> {
 
     // @ApiModelProperty("分页数据")

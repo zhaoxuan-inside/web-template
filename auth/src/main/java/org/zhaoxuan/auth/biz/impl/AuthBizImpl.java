@@ -12,6 +12,7 @@ import org.zhaoxuan.remote_call.bean.auth.out.*;
 import org.zhaoxuan.remote_call.feign.service.data.user.*;
 
 @Service
+@SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class AuthBizImpl implements AuthBiz {
 

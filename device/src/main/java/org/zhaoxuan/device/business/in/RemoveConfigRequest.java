@@ -1,6 +1,5 @@
 package org.zhaoxuan.device.business.in;
 
-import io.swagger.annotations.ApiModel;
 import lombok.*;
 
 @Data

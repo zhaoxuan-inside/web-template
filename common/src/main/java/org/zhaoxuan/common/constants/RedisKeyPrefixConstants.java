@@ -1,5 +1,6 @@
 package org.zhaoxuan.common.constants;
 
+@SuppressWarnings("unused")
 public interface RedisKeyPrefixConstants {
 
     String VERIFY_CODE_KEY_PREFIX = "VERIFY_CODE_KEY_PREFIX:";
