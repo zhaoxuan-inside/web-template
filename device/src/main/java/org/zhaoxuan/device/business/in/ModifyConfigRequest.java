@@ -7,7 +7,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel("配置修改请求")
+// @ApiModel("配置修改请求")
 @SuppressWarnings("unused")
 public class ModifyConfigRequest {
 }

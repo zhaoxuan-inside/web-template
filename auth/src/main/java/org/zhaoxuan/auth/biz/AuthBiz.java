@@ -1,21 +1,18 @@
-package org.zhaoxuan.user.auth.biz;
+package org.zhaoxuan.auth.biz;
 
-import org.auth.business.out.*;
-import org.zhaoxuan.user.auth.business.in.LoginRequest;
-import org.zhaoxuan.user.auth.business.out.*;
-import org.zhaoxuan.user.exception.CustomException;
-import org.zhaoxuan.auth.business.out.*;
-import org.zhaoxuan.business.out.*;
-import org.zhaoxuan.service.auth.business.out.*;
-import org.zhaoxuan.user.service.auth.business.out.*;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.zhaoxuan.remote_call.bean.auth.in.*;
+import org.zhaoxuan.remote_call.bean.auth.out.*;
 
 public interface AuthBiz {
     VerifyCodeResponse verifyCode();
 
-    LoginResonse login(LoginRequest request) throws CustomException;
+    LoginResonse login(@RequestBody @Validated LoginRequest request);
 
-    void logout();
+    void logout(@RequestBody @Validated LogoutRequest request);
 
-    LoginInfoResonse info() throws CustomException;
+    LoginInfoResonse info();
 
+    void tokenProlong(@RequestBody String token);
 }

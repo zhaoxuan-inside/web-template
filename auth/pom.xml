@@ -29,6 +29,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.zhaoxuan</groupId>
+            <artifactId>remote_call</artifactId>
+            <version>1.0.0-RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
         </dependency>

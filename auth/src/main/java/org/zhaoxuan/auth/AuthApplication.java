@@ -1,4 +1,4 @@
-package org.zhaoxuan.user.auth;
+package org.zhaoxuan.auth;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +9,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @EnableFeignClients()
-@SpringBootApplication()
 @EnableDiscoveryClient
+@SpringBootApplication()
 @MapperScan("com.zhaoxuan.*.data.mapper")
 public class AuthApplication {
 

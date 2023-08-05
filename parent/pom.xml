@@ -27,6 +27,7 @@
         <module>../device</module>
         <module>../data</module>
         <module>../monitor</module>
+        <module>../remote_call</module>
     </modules>
 
     <properties>
@@ -35,8 +36,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <tomcat-core.version>10.1.11</tomcat-core.version>
-        <spring-cloud.version>2020.0.0</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <spring-boot-web.version>3.1.1</spring-boot-web.version>
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
+        <gateway.version>3.0.0.</gateway.version>
         <spring-boot.version>3.1.2</spring-boot.version>
         <nacos-client.version>2.2.4</nacos-client.version>
 
@@ -58,12 +61,16 @@
         <sl4j-api.version>2.0.7</sl4j-api.version>
         <logback.versin>1.4.8</logback.versin>
 
-        <knife4j.version>3.0.3</knife4j.version>
-        <springfox-starter.version>3.0.0</springfox-starter.version>
+        <springdoc-webmvc.version>2.1.0</springdoc-webmvc.version>
+        <springdoc-webflux.version>1.7.0</springdoc-webflux.version>
 
         <commons-fileupload.version>1.5</commons-fileupload.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <guava.version>32.1.1-jre</guava.version>
+
+        <common.version>1.0.0-RELEASE</common.version>
+        <remote_call.version>1.0.0-RELEASE</remote_call.version>
+
     </properties>
 
     <dependencyManagement>
@@ -76,11 +83,29 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-web.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.alibaba.nacos</groupId>
+                        <artifactId>nacos-client</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-gateway-dependencies</artifactId>
+                <version>${gateway.version}</version>
             </dependency>
 
             <dependency>
@@ -172,15 +197,15 @@
             </dependency>
 
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc-webmvc.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${springfox-starter.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webflux-ui</artifactId>
+                <version>${springdoc-webflux.version}</version>
             </dependency>
 
             <dependency>
@@ -213,6 +238,17 @@
                 <version>${guava.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.zhaoxuan</groupId>
+                <artifactId>common</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.zhaoxuan</groupId>
+                <artifactId>remote_call</artifactId>
+                <version>${remote_call.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -4,7 +4,7 @@ import feign.*;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.MDC;
 import org.springframework.web.context.request.*;
-import org.zhaoxuan.user.constants.HeaderConstants;
+import org.zhaoxuan.common.constants.HeaderConstants;
 
 public class FeignInterceptor implements RequestInterceptor {
 
