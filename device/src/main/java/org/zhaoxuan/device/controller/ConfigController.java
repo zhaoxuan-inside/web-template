@@ -1,15 +1,9 @@
 package org.zhaoxuan.device.controller;
 
-import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
-import org.device.business.in.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.business.in.*;
 import org.zhaoxuan.device.business.in.*;
-import org.zhaoxuan.service.device.business.in.*;
-import org.zhaoxuan.user.device.business.in.*;
-import org.zhaoxuan.user.service.device.business.in.*;
 import org.zhaoxuan.device.business.out.GetConfigResponse;
 
 // @Api("配置管理")
