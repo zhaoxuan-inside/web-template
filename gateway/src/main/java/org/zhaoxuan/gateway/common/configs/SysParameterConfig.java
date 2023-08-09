@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 @Configuration
 @RefreshScope
-@ConfigurationProperties(prefix = "springfox.documentation.swagger-ui.path")
+@ConfigurationProperties(prefix = "auth")
 public class SysParameterConfig {
 
     private List<String> ignoreUrls;

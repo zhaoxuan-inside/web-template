@@ -21,6 +21,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.zhaoxuan</groupId>
             <artifactId>common</artifactId>

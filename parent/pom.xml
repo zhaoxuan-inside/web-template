@@ -61,6 +61,8 @@
         <sl4j-api.version>2.0.7</sl4j-api.version>
         <logback.versin>1.4.8</logback.versin>
 
+        <springdoc.version>1.7.0</springdoc.version>
+        <springdoc-core.version>1.1.49</springdoc-core.version>
         <springdoc-webmvc.version>2.1.0</springdoc-webmvc.version>
         <springdoc-webflux.version>1.7.0</springdoc-webflux.version>
 
@@ -198,8 +200,20 @@
 
             <dependency>
                 <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-                <version>${springdoc-webmvc.version}</version>
+                <artifactId>springdoc-openapi-webmvc-core</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-core</artifactId>
+                <version>${springdoc-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-common</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
 
             <dependency>

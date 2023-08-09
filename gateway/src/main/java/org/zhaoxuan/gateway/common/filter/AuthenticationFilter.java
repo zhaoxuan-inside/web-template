@@ -46,7 +46,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         LinkedHashMap<String, String> headerMap = new LinkedHashMap<>();
 
         String ip = IpUtil.getIpAddress(exchange.getRequest());
-        log.info(">> request from : {}", ip);
+        log.info(">> request from : {}, path : {}.", ip, requestUrl);
         if (!ObjectUtils.isEmpty(ip)) {
             headerMap.put(HeaderConstants.IP, ip);
         }
@@ -78,6 +78,9 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
                 httpHeader.set(entry.getKey(), entry.getValue());
             }
         };
+
+        log.info("request header size : {}.", headerMap.keySet().size());
+
         ServerHttpRequest tokenRequest = exchange.getRequest().mutate().headers(httpHeaders).build();
         ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
         return chain.filter(build);
