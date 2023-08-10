@@ -1,0 +1,1090 @@
+[2023-08-09_12:52:01.522] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_12:52:01.522] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_12:52:01.547] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_12:52:01.549] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_12:52:01.651] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+[2023-08-09_12:52:01.657] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+[2023-08-09_12:52:01.658] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:95] - De-registering from Nacos Server now...
+[2023-08-09_12:52:01.659] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:222] - [DEREGISTER-SERVICE] discrete-industries deregistering service discrete-industries-user with instance: Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+[2023-08-09_12:52:01.668] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:115] - De-registration finished.
+[2023-08-09_12:52:01.670] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:256] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+[2023-08-09_12:52:01.671] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:136] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+[2023-08-09_12:52:01.671] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:138] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+[2023-08-09_12:52:01.671] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:258] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+[2023-08-09_12:52:01.671] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:204] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+[2023-08-09_12:52:01.672] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:143] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+[2023-08-09_12:52:01.672] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:145] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+[2023-08-09_12:52:01.672] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:193] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+[2023-08-09_12:52:01.672] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_12:52:01.672] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:198] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:484] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:486] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:381] - Shutdown naming grpc client proxy for  uuid->47ae014b-ecee-4c50-8045-6f56bd608580
+[2023-08-09_12:52:01.673] [SpringApplicationShutdownHook] [INFO] [NamingGrpcRedoService.java:318] - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@2da37eec[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 23534]
+[2023-08-09_12:52:01.674] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:429] - Shutdown rpc client, set status to shutdown
+[2023-08-09_12:52:01.674] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:431] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@30cdf33c[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+[2023-08-09_12:52:01.674] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:586] - Close current connection 1691485940833_192.168.110.45_51906
+[2023-08-09_12:52:01.679] [nacos-grpc-client-executor-192.168.110.231-13475] [INFO] [LoggerUtils.java:63] - [1691485940833_192.168.110.45_51906]Ignore complete event,isRunning:false,isAbandon=false
+[2023-08-09_12:52:01.686] [SpringApplicationShutdownHook] [INFO] [GrpcClient.java:159] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@67b0d5aa[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 13476]
+[2023-08-09_12:52:01.686] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:391] - shutdown and remove naming rpc client  for uuid ->47ae014b-ecee-4c50-8045-6f56bd608580
+[2023-08-09_12:52:01.687] [SpringApplicationShutdownHook] [INFO] [CredentialWatcher.java:106] - [null] CredentialWatcher is stopped
+[2023-08-09_12:52:01.687] [SpringApplicationShutdownHook] [INFO] [CredentialService.java:99] - [null] CredentialService is freed
+[2023-08-09_12:52:01.688] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:211] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+[2023-08-09_17:31:52.253] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_17:31:52.254] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_17:31:53.114] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_17:31:53.189] [main] [INFO] [GenericScope.java:282] - BeanFactory id=647ebf32-6ede-36aa-8bd0-b6fb2182e9c3
+[2023-08-09_17:31:53.753] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_17:31:53.761] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_17:31:53.763] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_17:31:53.763] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_17:31:53.838] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_17:31:53.839] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1564 ms
+[2023-08-09_17:31:54.557] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_17:31:54.988] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_17:31:55.007] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_17:31:55.072] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_17:31:55.084] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_17:31:55.088] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_17:31:55.088] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_17:31:55.089] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_17:31:55.095] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_17:31:55.095] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_17:31:55.098] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of 4f241875-62fc-49db-8113-3ce77a0063fa
+[2023-08-09_17:31:55.099] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->4f241875-62fc-49db-8113-3ce77a0063fa
+[2023-08-09_17:31:55.099] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_17:31:55.100] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_17:31:55.101] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_17:31:55.101] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_17:31:55.102] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_17:31:55.227] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Success to connect to server [192.168.110.231:8848] on start up, connectionId = 1691573531453_192.168.110.45_64115
+[2023-08-09_17:31:55.227] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Notify connected event to listeners.
+[2023-08-09_17:31:55.228] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_17:31:55.228] [com.alibaba.nacos.client.remote.worker] [INFO] [NamingGrpcRedoService.java:78] - Grpc connection connect
+[2023-08-09_17:31:55.228] [main] [INFO] [LoggerUtils.java:63] - [4f241875-62fc-49db-8113-3ce77a0063fa] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$613/0x0000019734480a88
+[2023-08-09_17:31:55.229] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_17:31:55.261] [main] [INFO] [NacosServiceRegistry.java:76] - nacos registry, dev discrete-industries-user 192.168.110.45:18002 register finished
+[2023-08-09_17:31:55.378] [main] [INFO] [StartupInfoLogger.java:57] - Started UserApplication in 5.478 seconds (process running for 6.225)
+[2023-08-09_17:31:55.386] [main] [INFO] [CacheData.java:65] - config listener notify warn timeout millis use default 60000 millis 
+[2023-08-09_17:31:55.386] [main] [INFO] [CacheData.java:93] - nacos.cache.data.init.snapshot = true 
+[2023-08-09_17:31:55.397] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user+dev+discrete-industries
+[2023-08-09_17:31:55.403] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user, group=dev, cnt=1
+[2023-08-09_17:31:55.403] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user, group=dev
+[2023-08-09_17:31:55.403] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user.yaml+dev+discrete-industries
+[2023-08-09_17:31:55.404] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user.yaml, group=dev, cnt=1
+[2023-08-09_17:31:55.404] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user.yaml, group=dev
+[2023-08-09_17:31:55.404] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user-dev.yaml+dev+discrete-industries
+[2023-08-09_17:31:55.404] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user-dev.yaml, group=dev, cnt=1
+[2023-08-09_17:31:55.404] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user-dev.yaml, group=dev
+[2023-08-09_17:31:55.964] [RMI TCP Connection(2)-192.168.110.45] [INFO] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-09_17:31:55.965] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+[2023-08-09_17:31:55.965] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariDataSource.java:110] - HikariPool-1 - Starting...
+[2023-08-09_17:31:55.966] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:554] - Completed initialization in 1 ms
+[2023-08-09_17:31:56.109] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariPool.java:565] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e6049ff
+[2023-08-09_17:31:56.117] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariDataSource.java:123] - HikariPool-1 - Start completed.
+[2023-08-09_17:34:00.125] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_17:34:00.126] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_17:34:00.126] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_17:34:00.127] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_17:34:00.157] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+[2023-08-09_17:34:00.160] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+[2023-08-09_17:34:00.162] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:95] - De-registering from Nacos Server now...
+[2023-08-09_17:34:00.162] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:222] - [DEREGISTER-SERVICE] discrete-industries deregistering service discrete-industries-user with instance: Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+[2023-08-09_17:34:00.168] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:115] - De-registration finished.
+[2023-08-09_17:34:00.169] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:256] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+[2023-08-09_17:34:00.169] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:136] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:138] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:258] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:204] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:143] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:145] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:193] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:198] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:484] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_17:34:00.170] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:486] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+[2023-08-09_17:34:00.171] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:381] - Shutdown naming grpc client proxy for  uuid->4f241875-62fc-49db-8113-3ce77a0063fa
+[2023-08-09_17:34:00.171] [SpringApplicationShutdownHook] [INFO] [NamingGrpcRedoService.java:318] - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@648fb3fd[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 41]
+[2023-08-09_17:34:00.171] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:429] - Shutdown rpc client, set status to shutdown
+[2023-08-09_17:34:00.171] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:431] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5dcfc08[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+[2023-08-09_17:34:00.171] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:586] - Close current connection 1691573531453_192.168.110.45_64115
+[2023-08-09_17:34:00.175] [nacos-grpc-client-executor-192.168.110.231-34] [INFO] [LoggerUtils.java:63] - [1691573531453_192.168.110.45_64115]Ignore complete event,isRunning:false,isAbandon=false
+[2023-08-09_17:34:00.176] [SpringApplicationShutdownHook] [INFO] [GrpcClient.java:159] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@78bedc55[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 35]
+[2023-08-09_17:34:00.177] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:391] - shutdown and remove naming rpc client  for uuid ->4f241875-62fc-49db-8113-3ce77a0063fa
+[2023-08-09_17:34:00.177] [SpringApplicationShutdownHook] [INFO] [CredentialWatcher.java:106] - [null] CredentialWatcher is stopped
+[2023-08-09_17:34:00.177] [SpringApplicationShutdownHook] [INFO] [CredentialService.java:99] - [null] CredentialService is freed
+[2023-08-09_17:34:00.177] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:211] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+[2023-08-09_20:07:08.867] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:07:08.868] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:07:09.768] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:07:09.845] [main] [INFO] [GenericScope.java:282] - BeanFactory id=647ebf32-6ede-36aa-8bd0-b6fb2182e9c3
+[2023-08-09_20:07:10.617] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:07:10.625] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:07:10.627] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:07:10.627] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:07:10.692] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:07:10.693] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1810 ms
+[2023-08-09_20:07:11.458] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_20:07:11.930] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_20:07:11.955] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_20:07:12.042] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:07:12.054] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_20:07:12.060] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_20:07:12.060] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_20:07:12.061] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_20:07:12.069] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_20:07:12.070] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_20:07:12.073] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of 4d0721bd-cfef-4dfc-9ce4-2647fb4160d1
+[2023-08-09_20:07:12.075] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->4d0721bd-cfef-4dfc-9ce4-2647fb4160d1
+[2023-08-09_20:07:12.076] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_20:07:12.076] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_20:07:12.076] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_20:07:12.077] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:07:12.077] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:07:12.199] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Success to connect to server [192.168.110.231:8848] on start up, connectionId = 1691582848486_192.168.110.45_62771
+[2023-08-09_20:07:12.200] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Notify connected event to listeners.
+[2023-08-09_20:07:12.200] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_20:07:12.200] [com.alibaba.nacos.client.remote.worker] [INFO] [NamingGrpcRedoService.java:78] - Grpc connection connect
+[2023-08-09_20:07:12.200] [main] [INFO] [LoggerUtils.java:63] - [4d0721bd-cfef-4dfc-9ce4-2647fb4160d1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$613/0x000001958f481ed8
+[2023-08-09_20:07:12.201] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_20:07:12.244] [main] [INFO] [NacosServiceRegistry.java:76] - nacos registry, dev discrete-industries-user 192.168.110.45:18002 register finished
+[2023-08-09_20:07:12.369] [main] [INFO] [StartupInfoLogger.java:57] - Started UserApplication in 5.978 seconds (process running for 6.838)
+[2023-08-09_20:07:12.381] [main] [INFO] [CacheData.java:65] - config listener notify warn timeout millis use default 60000 millis 
+[2023-08-09_20:07:12.382] [main] [INFO] [CacheData.java:93] - nacos.cache.data.init.snapshot = true 
+[2023-08-09_20:07:12.390] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user+dev+discrete-industries
+[2023-08-09_20:07:12.397] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user, group=dev, cnt=1
+[2023-08-09_20:07:12.397] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user, group=dev
+[2023-08-09_20:07:12.397] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user.yaml+dev+discrete-industries
+[2023-08-09_20:07:12.397] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user.yaml, group=dev, cnt=1
+[2023-08-09_20:07:12.397] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user.yaml, group=dev
+[2023-08-09_20:07:12.398] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user-dev.yaml+dev+discrete-industries
+[2023-08-09_20:07:12.398] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user-dev.yaml, group=dev, cnt=1
+[2023-08-09_20:07:12.398] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user-dev.yaml, group=dev
+[2023-08-09_20:07:12.959] [RMI TCP Connection(1)-192.168.110.45] [INFO] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-09_20:07:12.959] [RMI TCP Connection(1)-192.168.110.45] [INFO] [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+[2023-08-09_20:07:12.960] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariDataSource.java:110] - HikariPool-1 - Starting...
+[2023-08-09_20:07:12.960] [RMI TCP Connection(1)-192.168.110.45] [INFO] [FrameworkServlet.java:554] - Completed initialization in 1 ms
+[2023-08-09_20:07:13.111] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariPool.java:565] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@482ec1ae
+[2023-08-09_20:07:13.115] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariDataSource.java:123] - HikariPool-1 - Start completed.
+[2023-08-09_20:18:47.955] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:18:47.956] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:18:48.795] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:18:48.862] [main] [INFO] [GenericScope.java:282] - BeanFactory id=647ebf32-6ede-36aa-8bd0-b6fb2182e9c3
+[2023-08-09_20:18:49.398] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:18:49.406] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:18:49.408] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:18:49.408] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:18:49.482] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:18:49.482] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1511 ms
+[2023-08-09_20:18:49.872] [com.alibaba.nacos.client.remote.worker] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 884700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@5ca36508[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-08-09_20:18:49.983] [com.alibaba.nacos.client.remote.worker] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:50.061] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_20:18:50.441] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_20:18:50.459] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_20:18:50.522] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:18:50.532] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_20:18:50.535] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_20:18:50.536] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_20:18:50.536] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_20:18:50.542] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_20:18:50.542] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_20:18:50.544] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of aa47b583-6707-4c96-85fb-8fa7e8fd3bfa
+[2023-08-09_20:18:50.546] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->aa47b583-6707-4c96-85fb-8fa7e8fd3bfa
+[2023-08-09_20:18:50.546] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_20:18:50.546] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_20:18:50.546] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_20:18:50.546] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:18:50.547] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:52.992] [com.alibaba.nacos.client.remote.worker] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 6 milliseconds, 993300 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@1d780a26[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-08-09_20:18:52.993] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [8026cf3f-1de1-4de3-b37d-42c15ac8d63d_config-0] Fail to connect server, after trying 1 times, last try server is {serverIp = '192.168.110.231', server main port = 8848}, error = unknown
+[2023-08-09_20:18:53.197] [com.alibaba.nacos.client.remote.worker] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:53.558] [com.alibaba.nacos.client.naming.grpc.redo.0] [WARN] [RedoScheduledTask.java:47] - Grpc Connection is disconnect, skip current redo task
+[2023-08-09_20:18:53.558] [main] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 9 milliseconds, 820000 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6e149395[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:364)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.start(NamingGrpcClientProxy.java:110)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.<init>(NamingGrpcClientProxy.java:103)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.<init>(NamingClientProxyDelegate.java:78)
+	at com.alibaba.nacos.client.naming.NacosNamingService.init(NacosNamingService.java:102)
+	at com.alibaba.nacos.client.naming.NacosNamingService.<init>(NacosNamingService.java:85)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.alibaba.nacos.api.naming.NamingFactory.createNamingService(NamingFactory.java:59)
+	at com.alibaba.nacos.api.NacosFactory.createNamingService(NacosFactory.java:77)
+	at com.alibaba.cloud.nacos.NacosServiceManager.createNewNamingService(NacosServiceManager.java:99)
+	at com.alibaba.cloud.nacos.NacosServiceManager.buildNamingService(NacosServiceManager.java:90)
+	at com.alibaba.cloud.nacos.NacosServiceManager.getNamingService(NacosServiceManager.java:46)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.namingService(NacosServiceRegistry.java:193)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:68)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:264)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:156)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:119)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:49)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:47)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:958)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:611)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+[2023-08-09_20:18:53.559] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:18:53.559] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:56.214] [com.alibaba.nacos.client.remote.worker] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 14 milliseconds, 870600 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@625be7e2[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-08-09_20:18:56.215] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [8026cf3f-1de1-4de3-b37d-42c15ac8d63d_config-0] Fail to connect server, after trying 2 times, last try server is {serverIp = '192.168.110.231', server main port = 8848}, error = unknown
+[2023-08-09_20:18:56.517] [com.alibaba.nacos.client.remote.worker] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:56.562] [com.alibaba.nacos.client.naming.grpc.redo.0] [WARN] [RedoScheduledTask.java:47] - Grpc Connection is disconnect, skip current redo task
+[2023-08-09_20:18:56.562] [main] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 202500 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@3f2169e9[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:364)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.start(NamingGrpcClientProxy.java:110)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.<init>(NamingGrpcClientProxy.java:103)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.<init>(NamingClientProxyDelegate.java:78)
+	at com.alibaba.nacos.client.naming.NacosNamingService.init(NacosNamingService.java:102)
+	at com.alibaba.nacos.client.naming.NacosNamingService.<init>(NacosNamingService.java:85)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.alibaba.nacos.api.naming.NamingFactory.createNamingService(NamingFactory.java:59)
+	at com.alibaba.nacos.api.NacosFactory.createNamingService(NacosFactory.java:77)
+	at com.alibaba.cloud.nacos.NacosServiceManager.createNewNamingService(NacosServiceManager.java:99)
+	at com.alibaba.cloud.nacos.NacosServiceManager.buildNamingService(NacosServiceManager.java:90)
+	at com.alibaba.cloud.nacos.NacosServiceManager.getNamingService(NacosServiceManager.java:46)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.namingService(NacosServiceRegistry.java:193)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:68)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:264)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:156)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:119)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:49)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:47)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:958)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:611)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+[2023-08-09_20:18:56.563] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:18:56.563] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:59.528] [com.alibaba.nacos.client.remote.worker] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 8 milliseconds, 397900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@7bea7a44[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-08-09_20:18:59.530] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [8026cf3f-1de1-4de3-b37d-42c15ac8d63d_config-0] Fail to connect server, after trying 3 times, last try server is {serverIp = '192.168.110.231', server main port = 8848}, error = unknown
+[2023-08-09_20:18:59.575] [com.alibaba.nacos.client.naming.grpc.redo.0] [WARN] [RedoScheduledTask.java:47] - Grpc Connection is disconnect, skip current redo task
+[2023-08-09_20:18:59.575] [main] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 9 milliseconds, 203000 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@7891742e[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@37637a24, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@31e76a8d, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@770beef5}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:364)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.start(NamingGrpcClientProxy.java:110)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.<init>(NamingGrpcClientProxy.java:103)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.<init>(NamingClientProxyDelegate.java:78)
+	at com.alibaba.nacos.client.naming.NacosNamingService.init(NacosNamingService.java:102)
+	at com.alibaba.nacos.client.naming.NacosNamingService.<init>(NacosNamingService.java:85)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.alibaba.nacos.api.naming.NamingFactory.createNamingService(NamingFactory.java:59)
+	at com.alibaba.nacos.api.NacosFactory.createNamingService(NacosFactory.java:77)
+	at com.alibaba.cloud.nacos.NacosServiceManager.createNewNamingService(NacosServiceManager.java:99)
+	at com.alibaba.cloud.nacos.NacosServiceManager.buildNamingService(NacosServiceManager.java:90)
+	at com.alibaba.cloud.nacos.NacosServiceManager.getNamingService(NacosServiceManager.java:46)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.namingService(NacosServiceRegistry.java:193)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:68)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:264)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:156)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:119)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:49)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:47)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:958)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:611)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+[2023-08-09_20:18:59.576] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+[2023-08-09_20:18:59.576] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_20:18:59.576] [main] [INFO] [LoggerUtils.java:63] - [aa47b583-6707-4c96-85fb-8fa7e8fd3bfa] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$612/0x000001bcb94526d0
+[2023-08-09_20:18:59.576] [com.alibaba.nacos.client.remote.worker] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:18:59.578] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_20:18:59.684] [main] [ERROR] [LoggerUtils.java:102] - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 0, errorMessage = Client not connected, current status:STARTING
+[2023-08-09_20:18:59.794] [main] [ERROR] [LoggerUtils.java:102] - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 1, errorMessage = Client not connected, current status:STARTING
+[2023-08-09_20:18:59.902] [main] [ERROR] [LoggerUtils.java:102] - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 2, errorMessage = Client not connected, current status:STARTING
+[2023-08-09_20:18:59.914] [main] [ERROR] [NacosServiceRegistry.java:81] - nacos registry, discrete-industries-user register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='192.168.110.231:8848', username='', password='', endpoint='', namespace='discrete-industries', watchDelay=30000, logName='', service='discrete-industries-user', weight=1.0, clusterName='DEFAULT', group='dev', namingLoadCacheAtStart='false', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.110.45', networkInterface='', port=18002, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, instanceEnabled=true, ephemeral=true, failureToleranceEnabled=false}, ipDeleteTimeout=null, failFast=true}},
+com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:STARTING
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:645)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:625)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:362)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:215)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:129)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:98)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:143)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:75)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:264)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:156)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:119)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:49)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:47)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:958)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:611)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+[2023-08-09_20:18:59.915] [main] [WARN] [AbstractApplicationContext.java:616] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+[2023-08-09_20:18:59.919] [main] [INFO] [ServiceInfoHolder.java:256] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+[2023-08-09_20:18:59.920] [main] [INFO] [FailoverReactor.java:136] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+[2023-08-09_20:18:59.933] [com.alibaba.nacos.client.remote.worker] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:19:00.245] [main] [INFO] [FailoverReactor.java:138] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+[2023-08-09_20:19:00.245] [main] [INFO] [ServiceInfoHolder.java:258] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+[2023-08-09_20:19:00.246] [main] [INFO] [NamingClientProxyDelegate.java:204] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+[2023-08-09_20:19:00.246] [main] [INFO] [ServiceInfoUpdateService.java:143] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+[2023-08-09_20:19:00.246] [main] [INFO] [ServiceInfoUpdateService.java:145] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+[2023-08-09_20:19:00.246] [main] [INFO] [ServerListManager.java:193] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+[2023-08-09_20:19:00.246] [main] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:19:00.246] [main] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:19:00.246] [main] [INFO] [ServerListManager.java:198] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+[2023-08-09_20:19:00.246] [main] [INFO] [NamingHttpClientProxy.java:484] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+[2023-08-09_20:19:00.246] [main] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:19:00.246] [main] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:19:00.246] [main] [INFO] [NamingHttpClientProxy.java:486] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+[2023-08-09_20:19:00.246] [main] [INFO] [NamingGrpcClientProxy.java:381] - Shutdown naming grpc client proxy for  uuid->aa47b583-6707-4c96-85fb-8fa7e8fd3bfa
+[2023-08-09_20:19:00.247] [main] [INFO] [NamingGrpcRedoService.java:318] - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@7fb1820d[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 3]
+[2023-08-09_20:19:00.247] [main] [INFO] [RpcClient.java:429] - Shutdown rpc client, set status to shutdown
+[2023-08-09_20:19:00.247] [main] [INFO] [RpcClient.java:431] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@7e27b77a[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+[2023-08-09_20:19:00.247] [main] [INFO] [GrpcClient.java:159] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6a30f6b1[Running, pool size = 11, active threads = 0, queued tasks = 0, completed tasks = 11]
+[2023-08-09_20:19:00.247] [com.alibaba.nacos.client.remote.worker] [ERROR] [LoggerUtils.java:102] - Server check fail, please check server 192.168.110.231 ,port 9848 is available , error ={}
+java.lang.InterruptedException: null
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:438)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-08-09_20:19:00.247] [main] [INFO] [NamingGrpcClientProxy.java:391] - shutdown and remove naming rpc client  for uuid ->aa47b583-6707-4c96-85fb-8fa7e8fd3bfa
+[2023-08-09_20:19:00.248] [main] [INFO] [CredentialWatcher.java:106] - [null] CredentialWatcher is stopped
+[2023-08-09_20:19:00.248] [main] [INFO] [CredentialService.java:99] - [null] CredentialService is freed
+[2023-08-09_20:19:00.248] [com.alibaba.nacos.client.remote.worker] [ERROR] [ManagedChannelImpl.java:182] - [Channel<41>: (192.168.110.231:9848)] Uncaught exception in the SynchronizationContext. Panic!
+com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNKNOWN: Uncaught exception in the SynchronizationContext. Re-thrown.
+	at com.alibaba.nacos.shaded.io.grpc.Status.asRuntimeException(Status.java:530)
+	at com.alibaba.nacos.shaded.io.grpc.internal.RetriableStream$1.uncaughtException(RetriableStream.java:75)
+	at com.alibaba.nacos.shaded.io.grpc.SynchronizationContext.drain(SynchronizationContext.java:97)
+	at com.alibaba.nacos.shaded.io.grpc.SynchronizationContext.execute(SynchronizationContext.java:127)
+	at com.alibaba.nacos.shaded.io.grpc.internal.RetriableStream.cancel(RetriableStream.java:493)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelImpl$UncommittedRetriableStreamsRegistry.onShutdownNow(ManagedChannelImpl.java:1416)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelImpl$RealChannel$1RealChannelShutdownNow.run(ManagedChannelImpl.java:1072)
+	at com.alibaba.nacos.shaded.io.grpc.SynchronizationContext.drain(SynchronizationContext.java:95)
+	at com.alibaba.nacos.shaded.io.grpc.SynchronizationContext.execute(SynchronizationContext.java:127)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelImpl$RealChannel.shutdownNow(ManagedChannelImpl.java:1076)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelImpl.shutdownNow(ManagedChannelImpl.java:838)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelImpl.shutdownNow(ManagedChannelImpl.java:117)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ForwardingManagedChannel.shutdownNow(ForwardingManagedChannel.java:52)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ManagedChannelOrphanWrapper.shutdownNow(ManagedChannelOrphanWrapper.java:65)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.shuntDownChannel(GrpcClient.java:200)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:331)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:506)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:344)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.util.concurrent.RejectedExecutionException: Task com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor@6257899d rejected from java.util.concurrent.ThreadPoolExecutor@6a30f6b1[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 11]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
+	at com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor.schedule(SerializingExecutor.java:102)
+	at com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor.execute(SerializingExecutor.java:95)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.closedInternal(ClientCallImpl.java:752)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.closed(ClientCallImpl.java:688)
+	at com.alibaba.nacos.shaded.io.grpc.internal.RetriableStream$4.run(RetriableStream.java:498)
+	at com.alibaba.nacos.shaded.io.grpc.SynchronizationContext.drain(SynchronizationContext.java:95)
+	... 22 common frames omitted
+[2023-08-09_20:19:00.248] [main] [INFO] [NamingClientProxyDelegate.java:211] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+[2023-08-09_20:19:00.258] [main] [INFO] [DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:19:00.259] [main] [INFO] [DirectJDKLog.java:173] - Stopping service [Tomcat]
+[2023-08-09_20:19:00.266] [main] [INFO] [DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:19:00.269] [main] [INFO] [DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:19:00.281] [main] [INFO] [ConditionEvaluationReportLogger.java:82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-08-09_20:19:00.298] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:958)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:611)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.lang.reflect.UndeclaredThrowableException: null
+	at org.springframework.util.ReflectionUtils.rethrowRuntimeException(ReflectionUtils.java:147)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:83)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:264)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:156)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:119)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:49)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:47)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	... 13 common frames omitted
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:STARTING
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:645)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:625)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:362)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:215)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.registerService(NamingGrpcClientProxy.java:129)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.registerService(NamingClientProxyDelegate.java:98)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:143)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:75)
+	... 25 common frames omitted
+[2023-08-09_20:19:00.300] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:19:00.300] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:19:00.300] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:19:00.300] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:19:28.707] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:19:28.708] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:19:29.495] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:19:29.548] [main] [INFO] [GenericScope.java:282] - BeanFactory id=647ebf32-6ede-36aa-8bd0-b6fb2182e9c3
+[2023-08-09_20:19:29.942] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:19:29.950] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:19:29.952] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:19:29.953] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:19:30.019] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:19:30.019] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1296 ms
+[2023-08-09_20:19:30.674] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_20:19:31.053] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_20:19:31.074] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_20:19:31.143] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:19:31.154] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_20:19:31.159] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_20:19:31.159] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_20:19:31.160] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_20:19:31.168] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_20:19:31.169] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_20:19:31.172] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of 16dcc8e0-7fc0-4be2-ad20-79b805b3191d
+[2023-08-09_20:19:31.174] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->16dcc8e0-7fc0-4be2-ad20-79b805b3191d
+[2023-08-09_20:19:31.174] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_20:19:31.174] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_20:19:31.174] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_20:19:31.175] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:19:31.175] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:19:31.315] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Success to connect to server [192.168.110.231:8848] on start up, connectionId = 1691583571195_192.168.110.45_65491
+[2023-08-09_20:19:31.315] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_20:19:31.315] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Notify connected event to listeners.
+[2023-08-09_20:19:31.315] [main] [INFO] [LoggerUtils.java:63] - [16dcc8e0-7fc0-4be2-ad20-79b805b3191d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$613/0x00000294014a0d88
+[2023-08-09_20:19:31.316] [com.alibaba.nacos.client.remote.worker] [INFO] [NamingGrpcRedoService.java:78] - Grpc connection connect
+[2023-08-09_20:19:31.317] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_20:19:31.336] [main] [INFO] [NacosServiceRegistry.java:76] - nacos registry, dev discrete-industries-user 192.168.110.45:18002 register finished
+[2023-08-09_20:19:31.426] [main] [INFO] [StartupInfoLogger.java:57] - Started UserApplication in 4.613 seconds (process running for 5.175)
+[2023-08-09_20:19:31.432] [main] [INFO] [CacheData.java:65] - config listener notify warn timeout millis use default 60000 millis 
+[2023-08-09_20:19:31.433] [main] [INFO] [CacheData.java:93] - nacos.cache.data.init.snapshot = true 
+[2023-08-09_20:19:31.439] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user+dev+discrete-industries
+[2023-08-09_20:19:31.448] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user, group=dev, cnt=1
+[2023-08-09_20:19:31.449] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user, group=dev
+[2023-08-09_20:19:31.449] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user.yaml+dev+discrete-industries
+[2023-08-09_20:19:31.449] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user.yaml, group=dev, cnt=1
+[2023-08-09_20:19:31.449] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user.yaml, group=dev
+[2023-08-09_20:19:31.450] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user-dev.yaml+dev+discrete-industries
+[2023-08-09_20:19:31.450] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user-dev.yaml, group=dev, cnt=1
+[2023-08-09_20:19:31.450] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user-dev.yaml, group=dev
+[2023-08-09_20:19:31.580] [RMI TCP Connection(3)-192.168.110.45] [INFO] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-09_20:19:31.580] [RMI TCP Connection(3)-192.168.110.45] [INFO] [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+[2023-08-09_20:19:31.580] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariDataSource.java:110] - HikariPool-1 - Starting...
+[2023-08-09_20:19:31.581] [RMI TCP Connection(3)-192.168.110.45] [INFO] [FrameworkServlet.java:554] - Completed initialization in 1 ms
+[2023-08-09_20:19:31.757] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariPool.java:565] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2523e47c
+[2023-08-09_20:19:31.760] [RMI TCP Connection(2)-192.168.110.45] [INFO] [HikariDataSource.java:123] - HikariPool-1 - Start completed.
+[2023-08-09_20:21:45.729] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:21:45.729] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:21:45.729] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:21:45.729] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:21:45.746] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+[2023-08-09_20:21:45.748] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+[2023-08-09_20:21:45.749] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:95] - De-registering from Nacos Server now...
+[2023-08-09_20:21:45.749] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:222] - [DEREGISTER-SERVICE] discrete-industries deregistering service discrete-industries-user with instance: Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+[2023-08-09_20:21:45.753] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:115] - De-registration finished.
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:256] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:136] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:138] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:258] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:204] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:143] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:145] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:193] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+[2023-08-09_20:21:45.754] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:198] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:484] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:486] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:381] - Shutdown naming grpc client proxy for  uuid->16dcc8e0-7fc0-4be2-ad20-79b805b3191d
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [NamingGrpcRedoService.java:318] - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@65b5e33e[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 44]
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:429] - Shutdown rpc client, set status to shutdown
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:431] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@7c96bda7[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+[2023-08-09_20:21:45.755] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:586] - Close current connection 1691583571195_192.168.110.45_65491
+[2023-08-09_20:21:45.758] [nacos-grpc-client-executor-192.168.110.231-37] [WARN] [LoggerUtils.java:89] - [1691583571195_192.168.110.45_65491]Ignore error event,isRunning:false,isAbandon=false
+[2023-08-09_20:21:45.759] [SpringApplicationShutdownHook] [INFO] [GrpcClient.java:159] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5fbd0041[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 38]
+[2023-08-09_20:21:45.760] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:391] - shutdown and remove naming rpc client  for uuid ->16dcc8e0-7fc0-4be2-ad20-79b805b3191d
+[2023-08-09_20:21:45.760] [SpringApplicationShutdownHook] [INFO] [CredentialWatcher.java:106] - [null] CredentialWatcher is stopped
+[2023-08-09_20:21:45.760] [SpringApplicationShutdownHook] [INFO] [CredentialService.java:99] - [null] CredentialService is freed
+[2023-08-09_20:21:45.760] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:211] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+[2023-08-09_20:21:53.815] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:21:53.815] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:21:54.685] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:21:54.745] [main] [INFO] [GenericScope.java:282] - BeanFactory id=29038256-dd3b-3b66-8981-71f9d3777941
+[2023-08-09_20:21:55.167] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:21:55.174] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:21:55.175] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:21:55.175] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:21:55.231] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:21:55.231] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1404 ms
+[2023-08-09_20:21:55.904] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_20:21:56.303] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_20:21:56.318] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_20:21:56.382] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:21:56.391] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_20:21:56.395] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_20:21:56.395] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_20:21:56.396] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_20:21:56.401] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_20:21:56.402] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_20:21:56.404] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of 1e4ba977-9a5b-400d-be2a-b7f9808a94b1
+[2023-08-09_20:21:56.406] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->1e4ba977-9a5b-400d-be2a-b7f9808a94b1
+[2023-08-09_20:21:56.406] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_20:21:56.406] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_20:21:56.406] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_20:21:56.407] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:21:56.407] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:21:56.532] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Success to connect to server [192.168.110.231:8848] on start up, connectionId = 1691583718917_192.168.110.45_49309
+[2023-08-09_20:21:56.532] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_20:21:56.532] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Notify connected event to listeners.
+[2023-08-09_20:21:56.533] [com.alibaba.nacos.client.remote.worker] [INFO] [NamingGrpcRedoService.java:78] - Grpc connection connect
+[2023-08-09_20:21:56.533] [main] [INFO] [LoggerUtils.java:63] - [1e4ba977-9a5b-400d-be2a-b7f9808a94b1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$613/0x0000023981480f80
+[2023-08-09_20:21:56.535] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_20:21:56.550] [main] [INFO] [NacosServiceRegistry.java:76] - nacos registry, dev discrete-industries-user 192.168.110.45:18002 register finished
+[2023-08-09_20:21:56.648] [main] [INFO] [StartupInfoLogger.java:57] - Started UserApplication in 4.735 seconds (process running for 5.481)
+[2023-08-09_20:21:56.657] [main] [INFO] [CacheData.java:65] - config listener notify warn timeout millis use default 60000 millis 
+[2023-08-09_20:21:56.658] [main] [INFO] [CacheData.java:93] - nacos.cache.data.init.snapshot = true 
+[2023-08-09_20:21:56.660] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user+dev+discrete-industries
+[2023-08-09_20:21:56.666] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user, group=dev, cnt=1
+[2023-08-09_20:21:56.666] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user, group=dev
+[2023-08-09_20:21:56.666] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user.yaml+dev+discrete-industries
+[2023-08-09_20:21:56.666] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user.yaml, group=dev, cnt=1
+[2023-08-09_20:21:56.666] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user.yaml, group=dev
+[2023-08-09_20:21:56.667] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user-dev.yaml+dev+discrete-industries
+[2023-08-09_20:21:56.667] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user-dev.yaml, group=dev, cnt=1
+[2023-08-09_20:21:56.667] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user-dev.yaml, group=dev
+[2023-08-09_20:21:56.949] [RMI TCP Connection(2)-192.168.110.45] [INFO] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-09_20:21:56.950] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+[2023-08-09_20:21:56.951] [RMI TCP Connection(1)-192.168.110.45] [INFO] [HikariDataSource.java:110] - HikariPool-1 - Starting...
+[2023-08-09_20:21:56.951] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:554] - Completed initialization in 1 ms
+[2023-08-09_20:21:57.081] [RMI TCP Connection(1)-192.168.110.45] [INFO] [HikariPool.java:565] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@563f0a99
+[2023-08-09_20:21:57.091] [RMI TCP Connection(1)-192.168.110.45] [INFO] [HikariDataSource.java:123] - HikariPool-1 - Start completed.
+[2023-08-09_20:24:00.843] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:24:00.844] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:24:00.844] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:24:00.845] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:24:00.935] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+[2023-08-09_20:24:00.940] [SpringApplicationShutdownHook] [INFO] [HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+[2023-08-09_20:24:00.941] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:95] - De-registering from Nacos Server now...
+[2023-08-09_20:24:00.941] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:222] - [DEREGISTER-SERVICE] discrete-industries deregistering service discrete-industries-user with instance: Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+[2023-08-09_20:24:00.955] [SpringApplicationShutdownHook] [INFO] [NacosServiceRegistry.java:115] - De-registration finished.
+[2023-08-09_20:24:00.960] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:256] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+[2023-08-09_20:24:00.961] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:136] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+[2023-08-09_20:24:00.963] [SpringApplicationShutdownHook] [INFO] [FailoverReactor.java:138] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+[2023-08-09_20:24:00.965] [SpringApplicationShutdownHook] [INFO] [ServiceInfoHolder.java:258] - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+[2023-08-09_20:24:00.966] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:204] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+[2023-08-09_20:24:00.966] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:143] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+[2023-08-09_20:24:00.966] [SpringApplicationShutdownHook] [INFO] [ServiceInfoUpdateService.java:145] - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+[2023-08-09_20:24:00.966] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:193] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [INFO] [ServerListManager.java:198] - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:484] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:74] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [WARN] [NamingHttpClientManager.java:81] - [NamingHttpClientManager] Destruction of the end
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [INFO] [NamingHttpClientProxy.java:486] - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:381] - Shutdown naming grpc client proxy for  uuid->1e4ba977-9a5b-400d-be2a-b7f9808a94b1
+[2023-08-09_20:24:00.967] [SpringApplicationShutdownHook] [INFO] [NamingGrpcRedoService.java:318] - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@4a8b2f44[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 41]
+[2023-08-09_20:24:00.968] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:429] - Shutdown rpc client, set status to shutdown
+[2023-08-09_20:24:00.968] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:431] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5a40b566[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+[2023-08-09_20:24:00.968] [SpringApplicationShutdownHook] [INFO] [RpcClient.java:586] - Close current connection 1691583718917_192.168.110.45_49309
+[2023-08-09_20:24:00.976] [SpringApplicationShutdownHook] [INFO] [GrpcClient.java:159] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6dcc0af0[Running, pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 34]
+[2023-08-09_20:24:00.980] [SpringApplicationShutdownHook] [INFO] [NamingGrpcClientProxy.java:391] - shutdown and remove naming rpc client  for uuid ->1e4ba977-9a5b-400d-be2a-b7f9808a94b1
+[2023-08-09_20:24:00.980] [SpringApplicationShutdownHook] [INFO] [CredentialWatcher.java:106] - [null] CredentialWatcher is stopped
+[2023-08-09_20:24:00.981] [SpringApplicationShutdownHook] [INFO] [CredentialService.java:99] - [null] CredentialService is freed
+[2023-08-09_20:24:00.982] [SpringApplicationShutdownHook] [INFO] [NamingClientProxyDelegate.java:211] - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+[2023-08-09_20:24:00.982] [nacos-grpc-client-executor-192.168.110.231-34] [WARN] [LoggerUtils.java:89] - [1691583718917_192.168.110.45_49309]Ignore error event,isRunning:false,isAbandon=false
+[2023-08-09_20:24:21.107] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:24:21.108] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:24:21.381] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class org.springdoc.core.configuration.SpringDocUIConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:796)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:723)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:694)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:182)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [org/springdoc/core/configuration/SpringDocUIConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 26 common frames omitted
+[2023-08-09_20:24:21.386] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:24:21.386] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:24:21.386] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:24:21.386] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:26:35.506] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:26:35.507] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:26:35.715] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class org.springdoc.core.configuration.SpringDocUIConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:796)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:723)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:694)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:182)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [org/springdoc/core/configuration/SpringDocUIConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 26 common frames omitted
+[2023-08-09_20:26:35.721] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:26:35.721] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:26:35.721] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:26:35.721] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:29:51.412] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:29:51.413] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:29:51.600] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class org.springdoc.core.configuration.SpringDocUIConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:796)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:723)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:694)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:182)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [org/springdoc/core/configuration/SpringDocUIConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 26 common frames omitted
+[2023-08-09_20:29:51.604] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:29:51.604] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:29:51.605] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:29:51.605] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:33:34.275] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:33:34.276] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:33:34.440] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class org.springdoc.core.configuration.SpringDocUIConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:796)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:723)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:694)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:182)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [org/springdoc/core/configuration/SpringDocUIConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 26 common frames omitted
+[2023-08-09_20:33:34.444] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:33:34.444] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:33:34.445] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:33:34.445] [Thread-1] [WARN] [HttpClientBeanHolder.java:111] - [HttpClientBeanHolder] Destruction of the end
+[2023-08-09_20:40:00.015] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:40:00.016] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:40:00.212] [main] [ERROR] [SpringApplication.java:824] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class org.springdoc.core.configuration.SpringDocUIConfiguration
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:467)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:796)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:723)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:694)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:182)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.zhaoxuan.user.UserApplication.main(UserApplication.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [org/springdoc/core/configuration/SpringDocUIConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 26 common frames omitted
+[2023-08-09_20:40:00.217] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:40:00.217] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:40:00.217] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:41:19.562] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:41:19.563] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:41:20.352] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:41:20.411] [main] [INFO] [GenericScope.java:282] - BeanFactory id=98ff241c-bcd2-39e7-9356-fa0173b4e6a5
+[2023-08-09_20:41:20.883] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:41:20.892] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:41:20.893] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:41:20.893] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:41:20.954] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:41:20.954] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1377 ms
+[2023-08-09_20:41:21.158] [main] [WARN] [AbstractApplicationContext.java:616] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0: Error creating bean with name 'swaggerWebMvcConfigurer' defined in class path resource [org/springdoc/webmvc/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebMvcConfigurer' parameter 1: Error creating bean with name 'indexPageTransformer' defined in class path resource [org/springdoc/webmvc/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'indexPageTransformer' parameter 3: Error creating bean with name 'swaggerWelcome' defined in class path resource [org/springdoc/webmvc/ui/SwaggerConfig.class]: Failed to instantiate [org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc]: Factory method 'swaggerWelcome' threw exception with message: 'void org.springdoc.ui.AbstractSwaggerWelcome.<init>(org.springdoc.core.properties.SwaggerUiConfigProperties, org.springdoc.core.properties.SpringDocConfigProperties, org.springdoc.core.properties.SwaggerUiConfigParameters)'
+[2023-08-09_20:41:21.160] [main] [INFO] [DirectJDKLog.java:173] - Stopping service [Tomcat]
+[2023-08-09_20:41:21.182] [main] [INFO] [ConditionEvaluationReportLogger.java:82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-08-09_20:41:21.198] [main] [ERROR] [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springdoc.webmvc.ui.SwaggerWelcomeCommon.<init>(SwaggerWelcomeCommon.java:54)
+
+The following method did not exist:
+
+    'void org.springdoc.ui.AbstractSwaggerWelcome.<init>(org.springdoc.core.properties.SwaggerUiConfigProperties, org.springdoc.core.properties.SpringDocConfigProperties, org.springdoc.core.properties.SwaggerUiConfigParameters)'
+
+The calling method's class, org.springdoc.webmvc.ui.SwaggerWelcomeCommon, was loaded from the following location:
+
+    jar:file:/F:/Cache/MavenRepository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar!/org/springdoc/webmvc/ui/SwaggerWelcomeCommon.class
+
+The called method's class, org.springdoc.ui.AbstractSwaggerWelcome, is available from the following locations:
+
+    jar:file:/F:/Cache/MavenRepository/org/springdoc/springdoc-openapi-common/1.7.0/springdoc-openapi-common-1.7.0.jar!/org/springdoc/ui/AbstractSwaggerWelcome.class
+    jar:file:/F:/Cache/MavenRepository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar!/org/springdoc/ui/AbstractSwaggerWelcome.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springdoc.ui.AbstractSwaggerWelcome: file:/F:/Cache/MavenRepository/org/springdoc/springdoc-openapi-common/1.7.0/springdoc-openapi-common-1.7.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springdoc.webmvc.ui.SwaggerWelcomeCommon and org.springdoc.ui.AbstractSwaggerWelcome
+
+[2023-08-09_20:41:21.199] [Thread-7] [WARN] [NotifyCenter.java:136] - [NotifyCenter] Start destroying Publisher
+[2023-08-09_20:41:21.199] [Thread-1] [WARN] [HttpClientBeanHolder.java:102] - [HttpClientBeanHolder] Start destroying common HttpClient
+[2023-08-09_20:41:21.200] [Thread-7] [WARN] [NotifyCenter.java:153] - [NotifyCenter] Destruction of the end
+[2023-08-09_20:44:36.485] [main] [WARN] [NacosLogging.java:64] - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+[2023-08-09_20:44:36.485] [main] [INFO] [SpringApplication.java:640] - The following 1 profile is active: "dev"
+[2023-08-09_20:44:37.249] [main] [WARN] [Logger.java:44] - No MyBatis mapper was found in '[org.zhaoxuan.user]' package. Please check your configuration.
+[2023-08-09_20:44:37.304] [main] [INFO] [GenericScope.java:282] - BeanFactory id=a8411beb-32ab-3832-9463-0780d2f2f607
+[2023-08-09_20:44:37.689] [main] [INFO] [TomcatWebServer.java:108] - Tomcat initialized with port(s): 18002 (http)
+[2023-08-09_20:44:37.695] [main] [INFO] [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:44:37.696] [main] [INFO] [DirectJDKLog.java:173] - Starting service [Tomcat]
+[2023-08-09_20:44:37.696] [main] [INFO] [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.11]
+[2023-08-09_20:44:37.748] [main] [INFO] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[2023-08-09_20:44:37.749] [main] [INFO] [ServletWebServerApplicationContext.java:291] - Root WebApplicationContext: initialization completed in 1251 ms
+[2023-08-09_20:44:38.421] [main] [INFO] [MybatisPlusJoinAutoConfiguration.java:111] - MPJSqlInjector init
+[2023-08-09_20:44:38.821] [main] [WARN] [LoadBalancerCacheAutoConfiguration.java:94] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-08-09_20:44:38.836] [main] [INFO] [EndpointLinksResolver.java:58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-08-09_20:44:38.894] [main] [INFO] [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-18002"]
+[2023-08-09_20:44:38.912] [main] [INFO] [TomcatWebServer.java:220] - Tomcat started on port(s): 18002 (http) with context path '/user'
+[2023-08-09_20:44:38.917] [main] [INFO] [InitUtils.java:62] - initializer namespace from ans.namespace attribute : null
+[2023-08-09_20:44:38.917] [main] [INFO] [InitUtils.java:66] - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+[2023-08-09_20:44:38.917] [main] [INFO] [InitUtils.java:73] - initializer namespace from namespace attribute :null
+[2023-08-09_20:44:38.925] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+[2023-08-09_20:44:38.925] [main] [INFO] [ClientAuthPluginManager.java:56] - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+[2023-08-09_20:44:38.928] [main] [INFO] [RpcClientFactory.java:108] - [RpcClientFactory] create a new rpc client of bcf9e42b-a047-477a-82eb-6f64baf05309
+[2023-08-09_20:44:38.930] [main] [INFO] [NamingGrpcClientProxy.java:102] - Create naming rpc client for uuid->bcf9e42b-a047-477a-82eb-6f64baf05309
+[2023-08-09_20:44:38.930] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+[2023-08-09_20:44:38.930] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+[2023-08-09_20:44:38.930] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+[2023-08-09_20:44:38.930] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Try to connect to server on start up, server: {serverIp = '192.168.110.231', server main port = 8848}
+[2023-08-09_20:44:38.931] [main] [INFO] [GrpcClient.java:182] - grpc client connection server:192.168.110.231 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+[2023-08-09_20:44:39.052] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Success to connect to server [192.168.110.231:8848] on start up, connectionId = 1691585102815_192.168.110.45_57411
+[2023-08-09_20:44:39.052] [com.alibaba.nacos.client.remote.worker] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Notify connected event to listeners.
+[2023-08-09_20:44:39.052] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+[2023-08-09_20:44:39.053] [main] [INFO] [LoggerUtils.java:63] - [bcf9e42b-a047-477a-82eb-6f64baf05309] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$613/0x00000275cd480000
+[2023-08-09_20:44:39.053] [com.alibaba.nacos.client.remote.worker] [INFO] [NamingGrpcRedoService.java:78] - Grpc connection connect
+[2023-08-09_20:44:39.054] [main] [INFO] [NamingGrpcClientProxy.java:126] - [REGISTER-SERVICE] discrete-industries registering service discrete-industries-user with instance Instance{instanceId='null', ip='192.168.110.45', port=18002, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+[2023-08-09_20:44:39.066] [main] [INFO] [NacosServiceRegistry.java:76] - nacos registry, dev discrete-industries-user 192.168.110.45:18002 register finished
+[2023-08-09_20:44:39.167] [main] [INFO] [StartupInfoLogger.java:57] - Started UserApplication in 4.438 seconds (process running for 5.029)
+[2023-08-09_20:44:39.176] [main] [INFO] [CacheData.java:65] - config listener notify warn timeout millis use default 60000 millis 
+[2023-08-09_20:44:39.184] [main] [INFO] [CacheData.java:93] - nacos.cache.data.init.snapshot = true 
+[2023-08-09_20:44:39.191] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user+dev+discrete-industries
+[2023-08-09_20:44:39.196] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user, group=dev, cnt=1
+[2023-08-09_20:44:39.196] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user, group=dev
+[2023-08-09_20:44:39.196] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user.yaml+dev+discrete-industries
+[2023-08-09_20:44:39.197] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user.yaml, group=dev, cnt=1
+[2023-08-09_20:44:39.197] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user.yaml, group=dev
+[2023-08-09_20:44:39.198] [main] [INFO] [ClientWorker.java:397] - [fixed-discrete-industries-192.168.110.231_8848] [subscribe] discrete-industries-user-dev.yaml+dev+discrete-industries
+[2023-08-09_20:44:39.198] [main] [INFO] [CacheData.java:230] - [fixed-discrete-industries-192.168.110.231_8848] [add-listener] ok, tenant=discrete-industries, dataId=discrete-industries-user-dev.yaml, group=dev, cnt=1
+[2023-08-09_20:44:39.198] [main] [INFO] [NacosContextRefresher.java:129] - [Nacos Config] Listening config: dataId=discrete-industries-user-dev.yaml, group=dev
+[2023-08-09_20:44:39.406] [RMI TCP Connection(2)-192.168.110.45] [INFO] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-09_20:44:39.406] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+[2023-08-09_20:44:39.407] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariDataSource.java:110] - HikariPool-1 - Starting...
+[2023-08-09_20:44:39.409] [RMI TCP Connection(2)-192.168.110.45] [INFO] [FrameworkServlet.java:554] - Completed initialization in 2 ms
+[2023-08-09_20:44:39.542] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariPool.java:565] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b5e1ab6
+[2023-08-09_20:44:39.545] [RMI TCP Connection(3)-192.168.110.45] [INFO] [HikariDataSource.java:123] - HikariPool-1 - Start completed.

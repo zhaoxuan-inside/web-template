@@ -2,10 +2,11 @@ package org.zhaoxuan.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.common.Beans.feign.bean.UserOrgRoleInfo;
-import org.zhaoxuan.common.Beans.feign.in.UserRequest;
-import org.zhaoxuan.common.request.*;
+import org.zhaoxuan.user.common.Beans.feign.bean.UserOrgRoleInfo;
+import org.zhaoxuan.user.common.Beans.feign.in.UserRequest;
+import org.zhaoxuan.user.common.request.PageResponse;
 
 // @Api(tags = "用户管理")
 @RestController
