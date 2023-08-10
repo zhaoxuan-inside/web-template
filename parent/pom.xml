@@ -28,6 +28,7 @@
         <module>../data</module>
         <module>../monitor</module>
         <module>../remote_call</module>
+        <module>../pojo</module>
     </modules>
 
     <properties>
@@ -62,9 +63,8 @@
         <logback.versin>1.4.8</logback.versin>
 
         <springdoc.version>1.7.0</springdoc.version>
-        <springdoc-core.version>1.1.49</springdoc-core.version>
-        <springdoc-webmvc.version>2.1.0</springdoc-webmvc.version>
         <springdoc-webflux.version>1.7.0</springdoc-webflux.version>
+        <sprongdoc-openapi.version>2.2.0</sprongdoc-openapi.version>
 
         <commons-fileupload.version>1.5</commons-fileupload.version>
         <snakeyaml.version>2.0</snakeyaml.version>
@@ -72,6 +72,7 @@
 
         <common.version>1.0.0-RELEASE</common.version>
         <remote_call.version>1.0.0-RELEASE</remote_call.version>
+        <pojo.version>1.0.0-RELEASE</pojo.version>
 
     </properties>
 
@@ -200,26 +201,14 @@
 
             <dependency>
                 <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webmvc-core</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-core</artifactId>
-                <version>${springdoc-core.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-common</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-webflux-ui</artifactId>
                 <version>${springdoc-webflux.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${sprongdoc-openapi.version}</version>
             </dependency>
 
             <dependency>
@@ -262,6 +251,12 @@
                 <groupId>org.zhaoxuan</groupId>
                 <artifactId>remote_call</artifactId>
                 <version>${remote_call.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.zhaoxuan</groupId>
+                <artifactId>pojo</artifactId>
+                <version>${pojo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

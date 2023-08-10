@@ -3,9 +3,10 @@ package org.zhaoxuan.data.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.common.Beans.feign.in.*;
+import org.zhaoxuan.pojo.bean.feign.in.*;
 import org.zhaoxuan.common.entity.user.OrgEntity;
-import org.zhaoxuan.common.request.*;
+import org.zhaoxuan.pojo.request.PageRequest;
+import org.zhaoxuan.pojo.request.PageResponse;
 
 // @Api(tags = "组织数据管理")
 @RestController

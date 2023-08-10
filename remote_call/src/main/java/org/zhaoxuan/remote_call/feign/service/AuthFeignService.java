@@ -6,7 +6,6 @@ import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
-import org.zhaoxuan.remote_call.bean.auth.in.*;
 import org.zhaoxuan.remote_call.bean.auth.out.*;
 
 @RefreshScope

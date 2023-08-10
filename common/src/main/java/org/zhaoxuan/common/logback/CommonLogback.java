@@ -3,24 +3,29 @@ package org.zhaoxuan.common.logback;
 import cn.hutool.core.lang.Snowflake;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import org.springframework.util.*;
-import org.springframework.web.context.request.*;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StopWatch;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.zhaoxuan.common.constants.HeaderConstants;
 
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Aspect
@@ -55,7 +60,7 @@ public class CommonLogback {
                 + "." + method.getName();
 
         List<Object> list = new ArrayList<>();
-        if (ArrayUtils.isNotEmpty(args)) {
+        if (!ObjectUtils.isEmpty(args)) {
             for (Object arg : args) {
                 if (arg instanceof HttpServletResponse || arg instanceof MultipartFile) {
                     continue;
