@@ -1,19 +1,23 @@
 package org.zhaoxuan.pojo.request;
 
-import lombok.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//// @Api("分页响应")
+@Schema(description = "分页响应")
 public class PageResponse<T> {
 
-    // @ApiModelProperty("分页数据")
+    @Schema(description = "分页数据")
     private T data;
-    // @ApiModelProperty("当前页号")
+    @Schema(description = "当前页号")
     private int page;
-    // @ApiModelProperty("总页数")
+    @Schema(description = "总页数")
     private int total;
 
 }

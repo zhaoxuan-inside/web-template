@@ -29,6 +29,11 @@
 
         <dependency>
             <groupId>org.zhaoxuan</groupId>
+            <artifactId>remote_call</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.zhaoxuan</groupId>
             <artifactId>pojo</artifactId>
         </dependency>
 

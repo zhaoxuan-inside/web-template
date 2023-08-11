@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="false">
-    <contextName>nacos</contextName>
 
-    <property name="SERVICE_NAME" value="user"/>
+    <property name="SERVICE_NAME" value="sys"/>
     <property name="ROOT_PATH" value="F:\\log"/>
-    <property name="LOG_DIR" value="logs"/>
+    <property name="LOG_DIR" value="sys"/>
     <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd_HH:mm:ss.SSS}] [%thread] [%level] [%file:%line] - %msg%n"/>
     <property name="ALL_LOG_FILE_NAME" value="${SERVICE_NAME}"/>
 
@@ -27,7 +26,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_DIR}/${SERVICE_NAME}.%d{yyyy-MM-dd}.log%i</fileNamePattern>
             <MaxHistory>30</MaxHistory>
-            <maxFileSize>10mb</maxFileSize>
+            <maxFileSize>1gb</maxFileSize>
         </rollingPolicy>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>

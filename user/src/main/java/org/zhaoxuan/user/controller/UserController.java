@@ -9,9 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.pojo.bean.feign.bean.UserOrgRoleInfo;
-import org.zhaoxuan.pojo.bean.feign.in.UserRequest;
 import org.zhaoxuan.pojo.request.PageResponse;
+import org.zhaoxuan.pojo.request.user.UserRequest;
+import org.zhaoxuan.pojo.response.user.UserOrgRoleInfo;
 
 @Tag(name = "用户管理")
 @RestController
@@ -20,24 +20,22 @@ import org.zhaoxuan.pojo.request.PageResponse;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class UserController {
 
-    @Operation(summary = "根绝ID获取用户详细信息")
+    @Operation(summary = "根据ID获取用户详细信息")
     @Parameters({
             @Parameter(name = "id", description = "用户ID", in = ParameterIn.PATH)
     })
     @GetMapping("/info/{id}")
-    public UserOrgRoleInfo basicInfo(@PathVariable long id) {
+    public UserOrgRoleInfo getById(@PathVariable long id) {
         return null;
     }
 
-    @GetMapping("/info/basic")
-    public PageResponse<UserOrgRoleInfo> basicInfo(
-            @RequestParam PageRequest page,
-            @RequestParam UserRequest userParam) {
-        return null;
-    }
-
-    @GetMapping("/info/detail")
-    public PageResponse<UserOrgRoleInfo> detailInfo(
+    @Operation(summary = "根据条件查询用户简要资料分页信息")
+    @Parameters({
+            @Parameter(name = "page", description = "分页信息", in = ParameterIn.HEADER),
+            @Parameter(name = "userParam", description = "查询条件", in = ParameterIn.HEADER)
+    })
+    @GetMapping("/info")
+    public PageResponse<UserOrgRoleInfo> getByConditions(
             @RequestParam PageRequest page,
             @RequestParam UserRequest userParam) {
         return null;

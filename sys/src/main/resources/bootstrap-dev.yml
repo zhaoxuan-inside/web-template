@@ -9,5 +9,5 @@ spring:
         server-addr: 192.168.110.231:8848
         namespace: discrete-industries
         group: dev
-        name: discrete-industries-data
+        name: discrete-industries-user
         file-extension: yaml

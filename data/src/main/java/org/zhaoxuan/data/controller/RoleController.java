@@ -3,10 +3,11 @@ package org.zhaoxuan.data.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.pojo.bean.feign.in.*;
-import org.zhaoxuan.common.entity.user.RoleEntity;
+import org.zhaoxuan.pojo.entity.user.RoleEntity;
 import org.zhaoxuan.pojo.request.PageRequest;
 import org.zhaoxuan.pojo.request.PageResponse;
+import org.zhaoxuan.pojo.request.user.BatchAddRequest;
+import org.zhaoxuan.pojo.request.user.RoleRequest;
 
 // @Api(tags = "角色数据管理")
 @RestController

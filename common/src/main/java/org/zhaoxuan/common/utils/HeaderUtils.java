@@ -3,7 +3,7 @@ package org.zhaoxuan.common.utils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.server.ServerWebExchange;
-import org.zhaoxuan.common.Beans.HeaderBean;
+import org.zhaoxuan.pojo.bean.HeaderBean;
 
 import java.lang.reflect.Field;
 

@@ -4,10 +4,12 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.zhaoxuan.pojo.bean.feign.in.*;
-import org.zhaoxuan.common.entity.user.OrgEntity;
+import org.zhaoxuan.pojo.entity.user.OrgEntity;
 import org.zhaoxuan.pojo.request.PageRequest;
 import org.zhaoxuan.pojo.request.PageResponse;
+import org.zhaoxuan.pojo.request.user.BatchAddRequest;
+import org.zhaoxuan.pojo.request.user.IdsRequest;
+import org.zhaoxuan.pojo.request.user.OrgRequest;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
 @RefreshScope
