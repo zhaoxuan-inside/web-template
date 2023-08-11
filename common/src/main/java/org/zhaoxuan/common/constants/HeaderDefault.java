@@ -1,8 +1,9 @@
 package org.zhaoxuan.common.constants;
 
+@SuppressWarnings("unused")
 public interface HeaderDefault {
 
-    String UNKNOW = "UNKNOW";
+    String UNKNOWN = "UNKNOWN";
 
 
 }

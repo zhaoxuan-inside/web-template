@@ -1,15 +1,14 @@
 package org.zhaoxuan.common.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class CustomException extends Exception {
-    private String code;
-    private boolean ifReport;
+    private ResponseCodeEnum abnormalResponse;
+    private List<String> params;
 }

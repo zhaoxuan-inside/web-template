@@ -20,19 +20,15 @@ import org.springframework.web.server.ServerWebExchange;
 import org.zhaoxuan.common.constants.CommonResponseCode;
 import org.zhaoxuan.common.constants.HeaderConstants;
 import org.zhaoxuan.common.exception.ExceptionDecider;
-import org.zhaoxuan.common.utils.HeaderUtils;
-import org.zhaoxuan.common.utils.IpUtil;
-import org.zhaoxuan.common.utils.MessageUtils;
-import org.zhaoxuan.common.utils.RedisAccessUtils;
+import org.zhaoxuan.common.exception.ResponseCodeEnum;
+import org.zhaoxuan.common.utils.*;
 import org.zhaoxuan.gateway.common.configs.SysParameterConfig;
 import org.zhaoxuan.pojo.bean.HeaderBean;
 import org.zhaoxuan.pojo.response.BaseResponse;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Consumer;
 
 @Slf4j
@@ -66,10 +62,8 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
 
         try {
             HeaderBean headerBean = HeaderUtils.mapHeaderParam(exchange);
-            ExceptionDecider.ifNull(headerBean.getToken(),
-                    String.valueOf(CommonResponseCode.UNAUTHORIZED));
-            ExceptionDecider.ifTrue(checkTokenExpire(headerBean.getToken()),
-                    String.valueOf(CommonResponseCode.UNAUTHORIZED));
+            ExceptionDecider.ifNull(headerBean.getToken(), ResponseCodeEnum.TOKEN_NOT_FOUND);
+            ExceptionDecider.ifTrue(checkTokenExpire(headerBean.getToken()), ResponseCodeEnum.TOKEN_INVALID);
 
             headerMap.put(HeaderConstants.TOKEN, headerBean.getToken());
             log.info(">> token：{}", headerBean.getToken());

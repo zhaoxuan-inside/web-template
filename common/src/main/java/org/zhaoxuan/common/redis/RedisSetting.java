@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class RedisSetting {
 
     private Integer model;
-    private String keyPrefix;
     private RSingleton singleton;
     private RSentinel sentinel;
     private RCluster cluster;

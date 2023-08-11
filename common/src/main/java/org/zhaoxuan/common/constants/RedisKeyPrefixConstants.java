@@ -7,5 +7,4 @@ public interface RedisKeyPrefixConstants {
     String USER_INFO_IDX_UID = "USER_INFO_IDX_UID:";
     String USER_ID_IDX_TOKEN = "USER_ID_IDX_TOKEN:";
 
-
 }

@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.util.ObjectUtils;
-import org.zhaoxuan.common.constants.*;
+import org.zhaoxuan.common.constants.CommonRedisKeyPrefixConstants;
+import org.zhaoxuan.common.constants.TimeConstants;
 import org.zhaoxuan.common.utils.RedisAccessUtils;
 
 import java.util.concurrent.TimeUnit;

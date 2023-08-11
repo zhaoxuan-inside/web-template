@@ -3,18 +3,18 @@ package org.zhaoxuan.remote_call.feign.service;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.zhaoxuan.pojo.request.auth.LoginRequest;
 import org.zhaoxuan.pojo.request.auth.LogoutRequest;
-import org.zhaoxuan.pojo.response.auth.LoginInfoResponse;
-import org.zhaoxuan.pojo.response.auth.LoginResponse;
-import org.zhaoxuan.pojo.response.auth.VerifyCodeResponse;
+import org.zhaoxuan.pojo.response.auth.*;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
+@Component
 @RefreshScope
+@SuppressWarnings("unused")
 @FeignClient(name = "auth", configuration = FeignInterceptor.class)
-@RequestMapping("/auth")
 public interface AuthFeignService {
 
     @PostMapping(value = "/code",

@@ -1,6 +1,7 @@
 package org.zhaoxuan.common.redis;
 
 import cn.hutool.core.util.ObjectUtil;
+import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;
@@ -17,7 +18,8 @@ import org.zhaoxuan.common.utils.RedisAccessUtils;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class RedissonConnector {
 
-    private final RedisSetting redisSetting;
+    @Resource
+    private RedisSetting redisSetting;
 
     private static final String REDIS_CONN_PREFIX = "redis://";
 

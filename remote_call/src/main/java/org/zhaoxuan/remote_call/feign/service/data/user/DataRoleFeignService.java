@@ -3,6 +3,7 @@ package org.zhaoxuan.remote_call.feign.service.data.user;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import org.zhaoxuan.pojo.entity.user.RoleEntity;
 import org.zhaoxuan.pojo.request.PageRequest;
@@ -11,8 +12,8 @@ import org.zhaoxuan.pojo.request.user.BatchAddRequest;
 import org.zhaoxuan.pojo.request.user.RoleRequest;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
+@Component
 @RefreshScope
-@RequestMapping("/data/role")
 @SuppressWarnings("unused")
 @FeignClient(name = "data-role", configuration = FeignInterceptor.class)
 public interface DataRoleFeignService {

@@ -1,19 +1,18 @@
 package org.zhaoxuan.pojo.request;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//// @Api("分页请求")
+@Schema(description = "分页请求")
 public class PageRequest {
-
-//    // @ApiModelProperty("分页起始id，默认不传为-1")
+    @Schema(description = "分页起始id，默认不传为-1")
     private long last = -1;
-//    // @ApiModelProperty("页号")
+    @Schema(description = "页号")
     private int page;
-    // @ApiModelProperty("页面大小")
+    @Schema(description = "页面大小")
     private int size;
-
 }

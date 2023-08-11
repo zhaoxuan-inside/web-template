@@ -2,8 +2,8 @@ package org.zhaoxuan.common.utils;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.util.ObjectUtils;
-import org.zhaoxuan.common.Beans.HeaderBean;
 import org.zhaoxuan.common.constants.HeaderConstants;
+import org.zhaoxuan.pojo.bean.HeaderBean;
 
 import java.util.Enumeration;
 

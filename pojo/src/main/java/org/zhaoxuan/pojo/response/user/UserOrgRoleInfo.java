@@ -1,12 +1,11 @@
 package org.zhaoxuan.pojo.response.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.zhaoxuan.pojo.entity.user.RoleEntity;
 import org.zhaoxuan.pojo.request.user.OrgBasicInfo;
+
+import java.io.Serializable;
 
 @Data
 @Builder
@@ -14,7 +13,7 @@ import org.zhaoxuan.pojo.request.user.OrgBasicInfo;
 @AllArgsConstructor
 @SuppressWarnings("unused")
 @Schema(description = "用户详细信息")
-public class UserOrgRoleInfo {
+public class UserOrgRoleInfo implements Serializable {
     @Schema(description = "用户ID")
     private long id;
     @Schema(description = "用户名称")

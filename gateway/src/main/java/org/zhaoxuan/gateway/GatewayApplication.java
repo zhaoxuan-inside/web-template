@@ -1,7 +1,6 @@
 package org.zhaoxuan.gateway;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springdoc.core.SwaggerUiConfigParameters;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -12,7 +11,7 @@ import org.zhaoxuan.common.configs.MessageUtilsConfig;
 import org.zhaoxuan.common.redis.RedissonConnector;
 
 @Slf4j
-@Import({RedissonConnector.class, MessageUtilsConfig.class, SwaggerUiConfigParameters.class})
+@Import({RedissonConnector.class, MessageUtilsConfig.class})
 @EnableScheduling
 @EnableFeignClients
 @SpringBootApplication

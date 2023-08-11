@@ -7,13 +7,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName("role")
 @Schema(description = "角色表")
-public class RoleEntity {
+public class RoleEntity implements Serializable {
     @Schema(description = "id")
     private long id;
     @Schema(description = "名称")

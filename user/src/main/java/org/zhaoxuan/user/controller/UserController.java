@@ -1,8 +1,6 @@
 package org.zhaoxuan.user.controller;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +17,16 @@ import org.zhaoxuan.pojo.response.user.UserOrgRoleInfo;
 @SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class UserController {
+
+    @Operation(summary = "校验用户的密码，返回用户UID")
+    @Parameters({
+            @Parameter(name = "account", description = "用户账号", in = ParameterIn.PATH),
+            @Parameter(name = "passwd", description = "用户密码", in = ParameterIn.HEADER),
+    })
+    @GetMapping("/check/{account}")
+    public Long checkPasswd(@PathVariable String account, @RequestBody String passwd) {
+        return 0L;
+    }
 
     @Operation(summary = "根据ID获取用户详细信息")
     @Parameters({

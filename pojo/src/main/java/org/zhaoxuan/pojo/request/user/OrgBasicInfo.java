@@ -1,11 +1,9 @@
 package org.zhaoxuan.pojo.request.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Data
@@ -13,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Org基本信息信息")
-public class OrgBasicInfo {
+public class OrgBasicInfo implements Serializable {
     @Schema(description = "组织ID")
     private long id;
     @Schema(description = "组织名称")
