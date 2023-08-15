@@ -1,19 +1,20 @@
 package org.zhaoxuan.gateway;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.zhaoxuan.common.configs.MessageUtilsConfig;
+import org.zhaoxuan.common.configs.SnowflakeConfig;
 import org.zhaoxuan.common.redis.RedissonConnector;
 
-@Slf4j
-@Import({RedissonConnector.class, MessageUtilsConfig.class})
+@Import({
+        RedissonConnector.class,
+        SnowflakeConfig.class
+})
 @EnableScheduling
-@EnableFeignClients
+@EnableFeignClients(basePackages = "org.zhaoxuan.remote_call")
 @SpringBootApplication
 @EnableDiscoveryClient
 public class GatewayApplication {

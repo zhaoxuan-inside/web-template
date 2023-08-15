@@ -1,5 +1,6 @@
 package org.zhaoxuan.pojo.request.user;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.util.List;
@@ -8,14 +9,14 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-// @ApiModel("用户表请求参数")
+@Schema(description = "用户表请求参数")
 public class UserRequest {
 
-    // @ApiModelProperty("ids")
+    @Schema(description = "ids")
     private List<Long> id;
-    // @ApiModelProperty("用户名称")
+    @Schema(description = "用户名称")
     private String name;
-    // @ApiModelProperty("用户账号")
+    @Schema(description = "用户账号")
     private String account;
 
 }

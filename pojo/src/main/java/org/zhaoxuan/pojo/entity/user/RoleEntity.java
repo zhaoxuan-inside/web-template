@@ -1,11 +1,9 @@
 package org.zhaoxuan.pojo.entity.user;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -13,13 +11,14 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("role")
-@Schema(description = "角色表")
+@Schema(description = "角色信息")
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@TableName(value = "\"role\"", autoResultMap = true)
 public class RoleEntity implements Serializable {
     @Schema(description = "id")
-    private long id;
+    private Long id;
     @Schema(description = "名称")
     private String name;
-    @Schema(description = "等级")
-    private int grade;
+    @Schema(description = "权限")
+    private String privilege;
 }

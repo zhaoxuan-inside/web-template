@@ -96,8 +96,15 @@ public class ImageUtils implements Serializable {
         g.drawLine(x, y, x + xl, y + yl);
     }
 
-    public static String getRandomString(int num) {
-        return String.valueOf(RAND_STRING.charAt(num));
+    public static String getRandomString(int length) {
+        StringBuilder stringBuilder = new StringBuilder();
+        int mod = RAND_STRING.length();
+
+        for (int i = 0; i < length; i++) {
+            stringBuilder.append(RAND_STRING.charAt(RANDOM.nextInt(0, mod - 1)));
+        }
+
+        return stringBuilder.toString();
     }
 
 }

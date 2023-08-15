@@ -1,5 +1,6 @@
 package org.zhaoxuan.pojo.request.user;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.util.List;
@@ -8,12 +9,10 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-// @ApiModel("组织表请求参数")
+@Schema(description = "组织表请求参数")
 public class OrgRequest {
-
-    // @ApiModelProperty("id")
+    @Schema(description = "id")
     private List<Long> id;
-    // @ApiModelProperty("组织名称")
+    @Schema(description = "组织名称")
     private String name;
-
 }

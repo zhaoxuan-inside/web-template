@@ -2,8 +2,8 @@
 <configuration scan="false">
 
     <property name="SERVICE_NAME" value="user"/>
-    <property name="ROOT_PATH" value="F:\\log"/>
-    <property name="LOG_DIR" value="user"/>
+    <property name="ROOT_PATH" value="../logs/"/>
+    <property name="LOG_DIR" value="${SERVICE_NAME}"/>
     <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd_HH:mm:ss.SSS}] [%thread] [%level] [%file:%line] - %msg%n"/>
     <property name="ALL_LOG_FILE_NAME" value="${SERVICE_NAME}"/>
 

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.zhaoxuan.auth.biz.AuthBiz;
 import org.zhaoxuan.common.exception.CustomException;
 import org.zhaoxuan.pojo.request.auth.LoginRequest;
-import org.zhaoxuan.pojo.request.auth.LogoutRequest;
 import org.zhaoxuan.pojo.response.auth.LoginResponse;
 import org.zhaoxuan.pojo.response.auth.VerifyCodeResponse;
 import org.zhaoxuan.pojo.response.user.UserOrgRoleInfo;
@@ -24,7 +23,7 @@ public class AuthController {
     private final AuthBiz authBiz;
 
     @Operation(description = "获取验证码")
-    @PostMapping("/code")
+    @GetMapping("/code")
     public VerifyCodeResponse verifyCode() {
         return authBiz.verifyCode();
     }
@@ -38,9 +37,9 @@ public class AuthController {
 
     @Operation(description = "用户登出")
     @DeleteMapping("/logout")
-    public void logout(@RequestBody @Validated LogoutRequest request)
+    public void logout()
             throws IllegalAccessException {
-        authBiz.logout(request);
+        authBiz.logout();
     }
 
     @Operation(description = "获取用户登录信息")

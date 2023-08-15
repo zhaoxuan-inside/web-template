@@ -63,7 +63,8 @@
         <logback.versin>1.4.8</logback.versin>
 
         <springdoc.version>1.7.0</springdoc.version>
-        <springdoc-webflux.version>1.7.0</springdoc-webflux.version>
+        <springdoc-common.version>1.6.0</springdoc-common.version>
+        <springdoc-webflux.version>2.1.0</springdoc-webflux.version>
         <sprongdoc-openapi.version>2.2.0</sprongdoc-openapi.version>
 
         <commons-fileupload.version>1.5</commons-fileupload.version>
@@ -201,7 +202,13 @@
 
             <dependency>
                 <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webflux-ui</artifactId>
+                <artifactId>springdoc-openapi-common</artifactId>
+                <version>${springdoc-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
                 <version>${springdoc-webflux.version}</version>
             </dependency>
 

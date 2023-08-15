@@ -17,8 +17,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.server.ServerWebExchange;
-import org.zhaoxuan.common.constants.CommonResponseCode;
-import org.zhaoxuan.common.constants.HeaderConstants;
+import org.zhaoxuan.common.constants.*;
 import org.zhaoxuan.common.exception.ExceptionDecider;
 import org.zhaoxuan.common.exception.ResponseCodeEnum;
 import org.zhaoxuan.common.utils.*;
@@ -33,6 +32,7 @@ import java.util.function.Consumer;
 
 @Slf4j
 @Component
+@SuppressWarnings({"unused", "UnusedReturnValue"})
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class AuthenticationFilter implements GlobalFilter, Ordered {
 
@@ -51,7 +51,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         LinkedHashMap<String, String> headerMap = new LinkedHashMap<>();
 
         String ip = IpUtil.getIpAddress(exchange.getRequest());
-        log.info(">> request from : {}, path : {}.", ip, requestUrl);
+        log.info(HeaderLogPatternConstants.REQUEST_HEADER_PARAM_IP, requestUrl, ip);
         if (!ObjectUtils.isEmpty(ip)) {
             headerMap.put(HeaderConstants.IP, ip);
         }
@@ -63,10 +63,14 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         try {
             HeaderBean headerBean = HeaderUtils.mapHeaderParam(exchange);
             ExceptionDecider.ifNull(headerBean.getToken(), ResponseCodeEnum.TOKEN_NOT_FOUND);
-            ExceptionDecider.ifTrue(checkTokenExpire(headerBean.getToken()), ResponseCodeEnum.TOKEN_INVALID);
+            ExceptionDecider.ifTrue(checkTokenExpire(headerBean.getFrom(),
+                            headerBean.getToken()),
+                    ResponseCodeEnum.TOKEN_INVALID);
 
             headerMap.put(HeaderConstants.TOKEN, headerBean.getToken());
-            log.info(">> token：{}", headerBean.getToken());
+            log.info(HeaderLogPatternConstants.REQUEST_HEADER_BEAN, headerBean);
+
+            prolongTokenExpire(headerBean.getFrom(), headerBean.getToken());
             return resetHeader(exchange, chain, headerMap);
         } catch (Exception e) {
             return invalidTokenMono(exchange);
@@ -82,25 +86,20 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
             }
         };
 
-        log.info("request header size : {}.", headerMap.keySet().size());
-
         ServerHttpRequest tokenRequest = exchange.getRequest().mutate().headers(httpHeaders).build();
         ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
         return chain.filter(build);
     }
 
-    private boolean checkTokenExpire(String token) {
-        String key = HeaderConstants.BEARER + token;
-        long expire = redisUtil.getExpire(key);
-        if (expire == -2) {
-            return true;
-        }
-//        authFeignService.tokenProlong(token);
-        if (!ObjectUtils.isEmpty(token)) {
-            key = HeaderConstants.BEARER + token;
-        }
-        Object object = redisUtil.get(key);
+    private boolean checkTokenExpire(String from, String token) {
+        from = ObjectUtils.isEmpty(from) ? "" : from;
+        Object object = redisUtil.get(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN + from + token);
         return ObjectUtils.isEmpty(object);
+    }
+
+    private boolean prolongTokenExpire(String from, String token) {
+        from = ObjectUtils.isEmpty(from) ? "" : from;
+        return redisUtil.prolong(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN + from + token, TimeConstants.ONE_HOUR);
     }
 
     @Override

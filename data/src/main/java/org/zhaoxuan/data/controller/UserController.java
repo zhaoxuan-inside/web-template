@@ -1,72 +1,72 @@
 package org.zhaoxuan.data.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.zhaoxuan.data.biz.UserBiz;
 import org.zhaoxuan.pojo.entity.user.UserEntity;
-import org.zhaoxuan.pojo.request.PageRequest;
+import org.zhaoxuan.pojo.request.PageParamRequest;
 import org.zhaoxuan.pojo.request.PageResponse;
 import org.zhaoxuan.pojo.request.user.*;
+import org.zhaoxuan.pojo.response.user.UserOrgRoleInfo;
 
-// @Api(tags = "用户数据管理")
+import java.util.List;
+
+@Tag(name = "用户数据管理")
 @RestController
 @RequestMapping("/user")
 @SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class UserController {
 
-    // @ApiOperation("分页获取user表数据")
-    @GetMapping("/page")
-    public PageResponse<UserEntity> userPage(
-            @RequestParam PageRequest page,
-            @RequestParam UserRequest userParam) {
-        return null;
-    }
+    private final UserBiz userBiz;
 
-    // @ApiOperation("用户表左连role表数据查询")
-    @GetMapping("/role/page")
-    public PageResponse<UserEntity> userRolePage(
-            @RequestParam PageRequest page,
-            @RequestParam UserRequest userParam,
-            @RequestParam RoleRequest roleParam) {
-        return null;
-    }
-
-    // @ApiOperation("用户表左连role表数据查询")
-    @GetMapping("/org/page")
-    public PageResponse<UserEntity> userOrgPage(
-            @RequestParam PageRequest page,
-            @RequestParam UserRequest userParam,
-            @RequestParam OrgRequest orgParam) {
-        return null;
-    }
-
-    // @ApiOperation("用户表左连role表数据查询")
-    @GetMapping("/org/role/page")
-    public PageResponse<UserEntity> userOrgRolePage(
-            @RequestParam PageRequest page,
-            @RequestParam UserRequest userParam,
-            @RequestParam RoleRequest roleParam,
-            @RequestParam OrgRequest orgParam) {
-        return null;
-    }
-
-    // @ApiOperation("添加用户")
+    @Operation(description = "添加用户")
     @PostMapping("")
-    public void addUser(@RequestBody BatchAddRequest<UserEntity> request) {
-
+    public void addUser(@RequestBody BatchRequest<UserEntity> request) {
+        userBiz.addUser(request);
     }
 
-    // @ApiOperation("删除用户")
+    @Operation(description = "删除用户")
     @DeleteMapping("")
-    public void removeUser(@RequestBody IdsRequest request) {
-
+    public void removeUser(@RequestBody BatchRequest<Long> request) {
+        userBiz.removeUser(request);
     }
 
-    // @ApiOperation("修改用户")
+    @Operation(description = "修改用户")
     @PutMapping("")
-    public void modifyUser(@RequestBody BatchAddRequest<UserEntity> request) {
+    public void modifyUser(@RequestBody BatchRequest<UserEntity> request) {
+        userBiz.modifyUser(request);
+    }
 
+    @Operation(description = "检查密码")
+    @GetMapping("/check/{account}")
+    public Long checkPasswd(
+            @PathVariable String account,
+            @RequestParam String passwd)
+            throws IllegalAccessException {
+        return userBiz.checkPasswd(account, passwd);
+    }
+
+    @GetMapping(value = "/condition",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    PageResponse<List<UserOrgRoleInfo>> pageByConditions(
+            @RequestParam(required = false) PageParamRequest page,
+            @RequestParam(required = false) UserRequest userParam,
+            @RequestParam(required = false) OrgRequest orgParam,
+            @RequestParam(required = false) RoleRequest roleParam) {
+        return userBiz.pageByConditions(page, userParam, orgParam, roleParam);
+    }
+
+    @GetMapping(value = "/{id}",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    UserOrgRoleInfo getUserById(@PathVariable long id) {
+        return userBiz.getUserById(id);
     }
 
 }

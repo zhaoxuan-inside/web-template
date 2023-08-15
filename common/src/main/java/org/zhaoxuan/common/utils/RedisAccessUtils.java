@@ -2,12 +2,15 @@ package org.zhaoxuan.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.*;
+import org.springframework.util.ObjectUtils;
+import org.zhaoxuan.common.constants.RedisLogPatternConstants;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "UnusedReturnValue"})
 public class RedisAccessUtils {
 
     private final RedissonClient redissonClient;
@@ -20,20 +23,62 @@ public class RedisAccessUtils {
         getBucket(key).set(value);
     }
 
-    public <V> void set(String key, V value, long timeToLive, TimeUnit timeUnit) {
-        getBucket(key).set(value, timeToLive, timeUnit);
+    public <V> void set(String key, V value, long expireTime, TimeUnit timeUnit) {
+        getBucket(key).set(value, expireTime, timeUnit);
+    }
+
+    public boolean lock(String key) {
+        RLock lock = redissonClient.getLock(key);
+        return lock.tryLock();
+    }
+
+    public boolean lock(String key, Integer competeLockWaitTime, TimeUnit timeUnit) {
+        RLock lock = redissonClient.getLock(key);
+        try {
+            return lock.tryLock(competeLockWaitTime, timeUnit);
+        } catch (InterruptedException ex) {
+            log.error(RedisLogPatternConstants.LOCK_ERROR, key, ex);
+            return false;
+        }
+    }
+
+    public boolean lock(String key, Integer competeLockWaitTime, Integer lockDurationTime, TimeUnit timeUnit) {
+        RLock lock = redissonClient.getLock(key);
+        try {
+            log.info(RedisLogPatternConstants.LOCK, lock.getName());
+            return lock.tryLock(competeLockWaitTime, lockDurationTime, timeUnit);
+        } catch (InterruptedException ex) {
+            log.error(RedisLogPatternConstants.LOCK_ERROR, key, ex);
+            ex.printStackTrace();
+            return false;
+        }
     }
 
     public boolean del(String key) {
         return getBucket(key).delete();
     }
 
-    public Object get(String key) {
-        return getBucket(key).get();
+    public void unlock(String key) {
+        RLock lock = redissonClient.getLock(key);
+        log.info(RedisLogPatternConstants.UNLOCK, lock.getName());
+        lock.unlock();
     }
 
     public Object getAndDelete(String key) {
         return getBucket(key).getAndDelete();
+    }
+
+    public boolean prolong(String key, long prolongTimeSeconds) {
+        RBucket<Object> bucket = redissonClient.getBucket(key);
+        if (ObjectUtils.isEmpty(bucket)) {
+            log.info(RedisLogPatternConstants.KEY_NOT_FOUND, key);
+            return false;
+        }
+        return bucket.expire(Duration.ofSeconds(prolongTimeSeconds));
+    }
+
+    public Object get(String key) {
+        return getBucket(key).get();
     }
 
     public Boolean exists(String key) {
@@ -44,41 +89,8 @@ public class RedisAccessUtils {
         return getBucket(key).remainTimeToLive();
     }
 
-    public boolean lock(String key) {
-        RLock lock = redissonClient.getLock(key);
-        return lock.tryLock();
-    }
-
     public <K, V> RStream<K, V> getStream(String name) {
         return redissonClient.getStream(name);
-    }
-
-    public boolean lock(String key, Integer waitTime, TimeUnit timeUnit) {
-        RLock lock = redissonClient.getLock(key);
-        try {
-            return lock.tryLock(waitTime, timeUnit);
-        } catch (InterruptedException e) {
-            log.error("redisson lock error", e);
-            return false;
-        }
-    }
-
-    public boolean lock(String key, Integer waitTime, Integer leaseTime, TimeUnit timeUnit) {
-        RLock lock = redissonClient.getLock(key);
-        try {
-            log.info("lock:{}.", lock.getName());
-            return lock.tryLock(waitTime, leaseTime, timeUnit);
-        } catch (InterruptedException e) {
-            log.error("redisson lock error, key:{}.", key);
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    public void unlock(String key) {
-        RLock lock = redissonClient.getLock(key);
-        log.info("lock:{}.", lock.getName());
-        lock.unlock();
     }
 
     public <V> V getAndSet(String key, V value) {

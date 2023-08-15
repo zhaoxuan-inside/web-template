@@ -1,14 +1,16 @@
 package org.zhaoxuan.remote_call.feign.service;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.zhaoxuan.pojo.request.auth.LoginRequest;
 import org.zhaoxuan.pojo.request.auth.LogoutRequest;
-import org.zhaoxuan.pojo.response.auth.*;
+import org.zhaoxuan.pojo.response.auth.LoginResponse;
+import org.zhaoxuan.pojo.response.auth.VerifyCodeResponse;
+import org.zhaoxuan.pojo.response.user.UserOrgRoleInfo;
 import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 
 @Component
@@ -17,30 +19,21 @@ import org.zhaoxuan.remote_call.feign.interceptor.FeignInterceptor;
 @FeignClient(name = "auth", configuration = FeignInterceptor.class)
 public interface AuthFeignService {
 
-    @PostMapping(value = "/code",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(description = "获取验证码")
+    @GetMapping("/auth/auth/code")
     VerifyCodeResponse verifyCode();
 
-    @PostMapping(value = "/login",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(description = "用户登录")
+    @PostMapping("/auth/auth/login")
     LoginResponse login(@RequestBody @Validated LoginRequest request);
 
-    @DeleteMapping(value = "/logout",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(description = "用户登出")
+    @DeleteMapping("/auth/auth/logout")
     void logout(@RequestBody @Validated LogoutRequest request);
 
-    @GetMapping(value = "/info",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    LoginInfoResponse info();
-
-    @PutMapping(value = "/token/prolong",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    void tokenProlong(@RequestBody String token);
+    @Operation(description = "获取用户登录信息")
+    @GetMapping("/auth/auth/info")
+    UserOrgRoleInfo info();
 
 }
 

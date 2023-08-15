@@ -39,7 +39,7 @@ public class SystemLock {
         }
     }
 
-    public void lock(String key) {
+    public void unlock(String key) {
         RLock lock = redissonClient.getLock(SYSTEM_LOCK_PREFIX + key);
         lock.unlock();
     }

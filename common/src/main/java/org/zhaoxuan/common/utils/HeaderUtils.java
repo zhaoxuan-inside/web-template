@@ -15,12 +15,14 @@ public class HeaderUtils {
 
         HeaderBean headerBean = new HeaderBean();
 
-        for (Field field : HeaderBean.class.getFields()) {
+        for (Field field : HeaderBean.class.getDeclaredFields()) {
             String headerFiled = exchange.getRequest().getHeaders().getFirst(field.getName());
             if (ObjectUtils.isEmpty(headerFiled)) {
                 headerFiled = "";
             }
+            field.setAccessible(true);
             field.set(headerBean, headerFiled);
+            field.setAccessible(false);
         }
 
         return headerBean;
@@ -32,12 +34,14 @@ public class HeaderUtils {
 
         HeaderBean headerBean = new HeaderBean();
 
-        for (Field field : HeaderBean.class.getFields()) {
+        for (Field field : HeaderBean.class.getDeclaredFields()) {
             String headerFiled = request.getHeader(field.getName());
             if (ObjectUtils.isEmpty(headerFiled)) {
                 headerFiled = "";
             }
+            field.setAccessible(true);
             field.set(headerBean, headerFiled);
+            field.setAccessible(false);
         }
 
         return headerBean;
