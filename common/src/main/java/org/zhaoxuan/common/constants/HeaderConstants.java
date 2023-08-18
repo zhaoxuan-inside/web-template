@@ -3,7 +3,7 @@ package org.zhaoxuan.common.constants;
 @SuppressWarnings("unused")
 public interface HeaderConstants {
 
-    String TRACE_ID = "TRACE_ID";
+    String TID = "tid";
     String TOKEN = "TOKEN";
     String TIMESTAMP = "TIMESTAMP";
     String FROM = "FROM";

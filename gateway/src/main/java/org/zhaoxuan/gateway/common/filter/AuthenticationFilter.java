@@ -1,10 +1,12 @@
 package org.zhaoxuan.gateway.common.filter;
 
+import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.text.AntPathMatcher;
 import com.alibaba.fastjson.JSON;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -40,13 +42,24 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     private RedisAccessUtils redisUtil;
     @Resource
     private MessageUtils messageUtils;
-
+    @Resource
+    private Snowflake snowflake;
     private final SysParameterConfig sysConfig;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
         String requestUrl = exchange.getRequest().getPath().value();
+
+        String tid = snowflake.nextIdStr();
+        HeaderBean headerBean = new HeaderBean();
+        try {
+            headerBean = HeaderUtils.mapHeaderParam(exchange);
+            headerBean.setTid(tid);
+            MDC.put(HeaderConstants.TID, tid);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
 
         LinkedHashMap<String, String> headerMap = new LinkedHashMap<>();
 
@@ -61,13 +74,15 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         }
 
         try {
-            HeaderBean headerBean = HeaderUtils.mapHeaderParam(exchange);
+
             ExceptionDecider.ifNull(headerBean.getToken(), ResponseCodeEnum.TOKEN_NOT_FOUND);
             ExceptionDecider.ifTrue(checkTokenExpire(headerBean.getFrom(),
                             headerBean.getToken()),
                     ResponseCodeEnum.TOKEN_INVALID);
 
             headerMap.put(HeaderConstants.TOKEN, headerBean.getToken());
+            headerMap.put(HeaderConstants.TID, tid);
+
             log.info(HeaderLogPatternConstants.REQUEST_HEADER_BEAN, headerBean);
 
             prolongTokenExpire(headerBean.getFrom(), headerBean.getToken());
@@ -92,14 +107,12 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     }
 
     private boolean checkTokenExpire(String from, String token) {
-        from = ObjectUtils.isEmpty(from) ? "" : from;
-        Object object = redisUtil.get(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN + from + token);
+        Object object = redisUtil.get(RedisKeyPrefixConstants.UID_IDX_TOKEN + from + token);
         return ObjectUtils.isEmpty(object);
     }
 
     private boolean prolongTokenExpire(String from, String token) {
-        from = ObjectUtils.isEmpty(from) ? "" : from;
-        return redisUtil.prolong(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN + from + token, TimeConstants.ONE_HOUR);
+        return redisUtil.prolong(RedisKeyPrefixConstants.UID_IDX_TOKEN + from + token, TimeConstants.ONE_HOUR);
     }
 
     @Override

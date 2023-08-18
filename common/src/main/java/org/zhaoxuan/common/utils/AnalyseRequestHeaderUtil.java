@@ -14,7 +14,7 @@ public class AnalyseRequestHeaderUtil {
 
         Enumeration<String> tokenOrig = request.getHeaders(HeaderConstants.TOKEN);
         String token = ObjectUtils.isEmpty(tokenOrig) ? "" : String.valueOf(tokenOrig);
-        Enumeration<String> traceIdOrig = request.getHeaders(HeaderConstants.TRACE_ID);
+        Enumeration<String> traceIdOrig = request.getHeaders(HeaderConstants.TID);
         String traceId = ObjectUtils.isEmpty(traceIdOrig) ? "" : String.valueOf(traceIdOrig);
         Enumeration<String> fromOrig = request.getHeaders(HeaderConstants.FROM);
         String from = String.valueOf(fromOrig);
@@ -22,7 +22,7 @@ public class AnalyseRequestHeaderUtil {
         return HeaderBean.builder()
                 .from(from)
                 .token(token)
-                .traceId(traceId)
+                .tid(traceId)
                 .build();
 
     }

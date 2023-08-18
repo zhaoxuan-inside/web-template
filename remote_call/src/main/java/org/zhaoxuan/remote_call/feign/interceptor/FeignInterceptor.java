@@ -14,7 +14,7 @@ public class FeignInterceptor implements RequestInterceptor {
         assert attributes != null;
         HttpServletRequest request = attributes.getRequest();
         template.header(HeaderConstants.TOKEN, request.getHeader(HeaderConstants.TOKEN));
-        template.header(HeaderConstants.TRACE_ID, MDC.get(HeaderConstants.TRACE_ID));
+        template.header(HeaderConstants.TID, MDC.get(HeaderConstants.TID));
     }
 
 }

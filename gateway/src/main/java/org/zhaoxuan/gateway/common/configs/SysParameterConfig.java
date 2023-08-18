@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 @Configuration
 @RefreshScope
-@ConfigurationProperties(prefix = "auth")
+@ConfigurationProperties(prefix = "module.auth")
 public class SysParameterConfig {
 
     private List<String> ignoreUrls;

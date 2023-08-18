@@ -16,10 +16,10 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StopWatch;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.zhaoxuan.common.constants.HeaderConstants;
+import org.zhaoxuan.common.utils.HeaderUtils;
+import org.zhaoxuan.pojo.bean.HeaderBean;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -32,7 +32,9 @@ import java.util.List;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class OverallLogback {
 
+    private final HttpServletRequest httpServletRequest;
     private final Snowflake snowflake;
+    private final Integer MAX_LOG_LENGTH = 500;
 
     @Pointcut("execution(* org.zhaoxuan.*.controller.*.*(..)) || " +
             "execution(* org.zhaoxuan.*.feign.service.*.*(..)) || " +
@@ -41,13 +43,18 @@ public class OverallLogback {
     public void syslog() {
     }
 
-
     @Order(0)
     @Around(value = "syslog()")
     public Object interceptorAppLogic(ProceedingJoinPoint pj)
             throws Throwable {
 
         StopWatch stopWatch = new StopWatch();
+
+        HeaderBean headerBean = HeaderUtils.mapHeaderParam(httpServletRequest);
+        headerBean.setTid(ObjectUtils.isEmpty(headerBean.getTid()) ?
+                snowflake.nextIdStr() :
+                headerBean.getTid());
+        MDC.put(HeaderConstants.TID, headerBean.getTid());
 
         Object[] args = pj.getArgs();
         MethodSignature signature = (MethodSignature) pj.getSignature();
@@ -63,8 +70,8 @@ public class OverallLogback {
                     continue;
                 }
                 if (arg instanceof HttpServletRequest) {
-                    String traceId = ((HttpServletRequest) arg).getHeader(HeaderConstants.TRACE_ID);
-                    MDC.put(HeaderConstants.TRACE_ID, traceId);
+                    String traceId = ((HttpServletRequest) arg).getHeader(HeaderConstants.TID);
+                    MDC.put(HeaderConstants.TID, traceId);
                     continue;
                 }
                 list.add(arg);
@@ -72,41 +79,25 @@ public class OverallLogback {
         }
 
         String requestParam = JSON.toJSONString(list, SerializerFeature.WriteNullStringAsEmpty);
-        requestParam = requestParam.substring(Math.min(500, requestParam.length()));
+        requestParam = requestParam.length() > MAX_LOG_LENGTH ?
+                requestParam.substring(0, MAX_LOG_LENGTH) :
+                requestParam;
+
         Object proceed = null;
         String requestUri = null;
+        log.info("request uri[{}], METHOD:[{}], request:{}]", requestUri, methodName, requestParam);
+
         try {
-            String traceId = null;
-            ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-            if (attributes != null) {
-                HttpServletRequest request = attributes.getRequest();
-                if (!ObjectUtils.isEmpty(request)) {
-                    traceId = request.getHeader(HeaderConstants.TRACE_ID);
-                    requestUri = request.getRequestURI();
-                }
-            }
-
-            if (ObjectUtils.isEmpty(traceId)) {
-                traceId = snowflake.nextIdStr();
-            }
-
-            MDC.put(HeaderConstants.TRACE_ID, traceId);
-
-            log.info("request uri[{}], METHOD:[{}], request:{}]", requestUri, methodName, requestParam);
-
             stopWatch.start();
             proceed = pj.proceed(args);
         } finally {
-
             stopWatch.stop();
 
             String response = JSON.toJSONString(proceed, SerializerFeature.WriteNullStringAsEmpty);
-            response = response.substring(0, Math.min(500, requestParam.length()));
+            response = response.length() > MAX_LOG_LENGTH ? response.substring(0, MAX_LOG_LENGTH) : response;
             log.info("request uri[{}], method name[{}], request {}, response[{}], 请求耗时[{}ms]",
                     requestUri, methodName, requestParam, response, stopWatch.getLastTaskTimeMillis());
-
         }
-
         return proceed;
     }
 

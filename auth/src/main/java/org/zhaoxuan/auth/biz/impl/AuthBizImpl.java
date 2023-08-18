@@ -71,19 +71,27 @@ public class AuthBizImpl implements AuthBiz {
                         !request.getCode().equals(verifyCode),
                 ResponseCodeEnum.VERIFY_CODE_INVALID);
 
-        long id = dataFeignService.checkPasswd(request.getAccount(), request.getPassword());
-        UserOrgRoleInfo user = dataFeignService.getUserById(id);
+        long uid = dataFeignService.checkPasswd(request.getAccount(), request.getPassword());
+        UserOrgRoleInfo user = dataFeignService.getUserById(uid);
 
         long token = snowflake.nextId();
-        HeaderBean header = HeaderUtils.mapHeaderParam(httpServletRequest);
-        String from = ObjectUtils.isEmpty(header.getFrom()) ? "" : header.getFrom();
-        redisAccessUtils.set(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN + from + token,
-                id,
+        HeaderBean headerBean = HeaderUtils.mapHeaderParam(httpServletRequest);
+
+        redisAccessUtils.del(RedisKeyPrefixConstants.VERIFY_CODE_KEY_PREFIX + request.getCodeId());
+
+        Long oldToken = (Long) redisAccessUtils.get(RedisKeyPrefixConstants.TOKEN_IDX_UID + headerBean.getFrom() + uid);
+        redisAccessUtils.del(RedisKeyPrefixConstants.UID_IDX_TOKEN + headerBean.getFrom() + oldToken);
+        redisAccessUtils.del(RedisKeyPrefixConstants.TOKEN_IDX_UID + headerBean.getFrom() + uid);
+
+        redisAccessUtils.set(RedisKeyPrefixConstants.TOKEN_IDX_UID + headerBean.getFrom() + uid,
+                token,
                 TimeConstants.ONE_HOUR,
                 TimeUnit.SECONDS);
 
-        redisAccessUtils.del(RedisKeyPrefixConstants.VERIFY_CODE_KEY_PREFIX +
-                request.getCodeId());
+        redisAccessUtils.set(RedisKeyPrefixConstants.UID_IDX_TOKEN + headerBean.getFrom() + token,
+                uid,
+                TimeConstants.ONE_HOUR,
+                TimeUnit.SECONDS);
 
         return LoginResponse.builder().token(String.valueOf(token)).build();
 
@@ -93,7 +101,7 @@ public class AuthBizImpl implements AuthBiz {
     public void logout()
             throws IllegalAccessException {
         HeaderBean header = HeaderUtils.mapHeaderParam(httpServletRequest);
-        redisAccessUtils.del(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN +
+        redisAccessUtils.del(RedisKeyPrefixConstants.UID_IDX_TOKEN +
                 header.getFrom() +
                 header.getToken());
     }
@@ -102,7 +110,7 @@ public class AuthBizImpl implements AuthBiz {
     public UserOrgRoleInfo info()
             throws IllegalAccessException, CustomException {
         HeaderBean header = HeaderUtils.mapHeaderParam(httpServletRequest);
-        Long uid = (Long) redisAccessUtils.get(RedisKeyPrefixConstants.USER_ID_IDX_TOKEN +
+        Long uid = (Long) redisAccessUtils.get(RedisKeyPrefixConstants.UID_IDX_TOKEN +
                 header.getFrom() +
                 header.getToken());
         ExceptionDecider.ifNull(uid, ResponseCodeEnum.TOKEN_INVALID);

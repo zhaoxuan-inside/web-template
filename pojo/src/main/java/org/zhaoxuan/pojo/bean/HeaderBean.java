@@ -12,6 +12,6 @@ public class HeaderBean {
 
     private String token;
     private String from;
-    private String traceId;
+    private String tid;
 
 }

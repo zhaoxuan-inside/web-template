@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false">
+
+    <springProperty scope="context" name="SERVICE_NAME" source="spring.application.name"/>
+    <property name="ROOT_PATH" value="../logs"/>
+    <property name="LOG_DIR" value="${SERVICE_NAME}"/>
+    <property name="LOG_PATTERN"
+              value="[%level] [%d{yyyy-MM-dd_HH:mm:ss.SSS}] TRACE_ID:[%X{tid}] [%thread] [%file:%line] - %msg%n"/>
+    <property name="ALL_LOG_FILE_NAME" value="${SERVICE_NAME}"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{tid}] [%thread] %-5level %logger{36} -%msg%n</pattern>
+                <charset>utf-8</charset>
+            </layout>
+        </encoder>
+    </appender>
+
+    <appender name="SEND_TO_SKYWALKING" class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{tid}] [%thread] %-5level %logger{36} -%msg%n</Pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SEND_TO_SKYWALKING"/>
+    </root>
+
+</configuration>

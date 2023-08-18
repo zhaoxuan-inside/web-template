@@ -26,15 +26,15 @@ public class GatewayFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        String traceId = exchange.getRequest().getHeaders().getFirst(HeaderConstants.TRACE_ID);
+        String traceId = exchange.getRequest().getHeaders().getFirst(HeaderConstants.TID);
         traceId = ObjectUtils.isEmpty(traceId) ? snowflake.nextIdStr() : traceId;
 
-        MDC.put(HeaderConstants.TRACE_ID, traceId);
+        MDC.put(HeaderConstants.TID, traceId);
         ServerHttpRequest serverHttpRequest = exchange.getRequest().mutate()
-                .header(HeaderConstants.TRACE_ID, traceId)
+                .header(HeaderConstants.TID, traceId)
                 .build();
 
-        exchange.getResponse().getHeaders().set(HeaderConstants.TRACE_ID, traceId);
+        exchange.getResponse().getHeaders().set(HeaderConstants.TID, traceId);
 
         ServerWebExchange build = exchange.mutate().request(serverHttpRequest).build();
         return chain.filter(build);
