@@ -2,6 +2,7 @@ package org.zhaoxuan.common.configs;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
+import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
@@ -17,15 +18,16 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class SnowflakeConfig {
 
-    private final RedisAccessUtils redisAccessUtils;
+    @Resource
+    private RedisAccessUtils redisAccessUtils;
 
     @Bean
     public Snowflake snowflake() {
 
         for (; ; ) {
             boolean lock = redisAccessUtils.lock(CommonRedisKeyPrefixConstants.SNOW_FLAKE_LOCK,
-                    (int) TimeConstants.ONE_SECOND * 10,
-                    (int) TimeConstants.ONE_SECOND * 3,
+                    TimeConstants.ONE_SECOND * 10,
+                    TimeConstants.ONE_SECOND * 3,
                     TimeUnit.SECONDS);
             try {
                 if (lock) {
