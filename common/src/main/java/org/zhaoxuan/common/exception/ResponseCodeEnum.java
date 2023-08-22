@@ -8,6 +8,7 @@ import lombok.Generated;
 @SuppressWarnings("unused")
 public enum ResponseCodeEnum {
 
+    SYSTEM_BUSY("201", "系统繁忙", "System busy. requestPath:{}"),
     BAD_REQUEST("400", "异常请求", "BAD REQUEST"),
     TOKEN_NOT_FOUND("401", "鉴权失败", "TOKE NOT FOUND"),
     TOKEN_INVALID("401", "鉴权失败.", "TOKEN INVALID. name:{}, age:{}"),

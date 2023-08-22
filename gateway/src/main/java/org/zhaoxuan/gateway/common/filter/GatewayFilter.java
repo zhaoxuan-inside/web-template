@@ -1,12 +1,12 @@
 package org.zhaoxuan.gateway.common.filter;
 
 import cn.hutool.core.lang.Snowflake;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jboss.logging.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.gateway.filter.*;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.Ordered;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -21,8 +21,7 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class GatewayFilter implements GlobalFilter, Ordered {
 
-    @Resource
-    private Snowflake snowflake;
+    private final Snowflake snowflake;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {

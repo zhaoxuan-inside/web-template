@@ -19,8 +19,8 @@ import org.zhaoxuan.common.redis.RedissonConnector;
 })
 @EnableScheduling
 @EnableFeignClients(basePackages = "org.zhaoxuan.remote_call")
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication()
 public class SysApplication {
     public static void main(String[] args) {
         SpringApplication.run(SysApplication.class, args);

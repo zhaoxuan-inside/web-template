@@ -1,7 +1,6 @@
 package org.zhaoxuan.data.biz.impl;
 
 import cn.hutool.core.lang.Snowflake;
-import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +26,10 @@ import java.util.concurrent.TimeUnit;
 @SuppressWarnings("unused")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class UserBizImpl implements UserBiz {
-    @Resource
-    private Snowflake snowflake;
-    @Resource
-    private RedisAccessUtils redisAccessUtils;
-    @Resource
-    private SystemLock systemLock;
+
+    private final Snowflake snowflake;
+    private final RedisAccessUtils redisAccessUtils;
+    private final SystemLock systemLock;
     private final UserService userService;
     private final HttpServletRequest httpServletRequest;
 

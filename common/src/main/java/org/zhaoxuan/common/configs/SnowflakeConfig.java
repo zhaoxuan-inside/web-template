@@ -2,7 +2,6 @@ package org.zhaoxuan.common.configs;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
@@ -18,8 +17,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class SnowflakeConfig {
 
-    @Resource
-    private RedisAccessUtils redisAccessUtils;
+    private final RedisAccessUtils redisAccessUtils;
 
     @Bean
     public Snowflake snowflake() {

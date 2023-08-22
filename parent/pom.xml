@@ -63,6 +63,9 @@
         <spring-cloud-alibaba-sentinel-gateway.version>2021.1</spring-cloud-alibaba-sentinel-gateway.version>
         <sentinel-gateway-adapter.version>1.8.6</sentinel-gateway-adapter.version>
         <sentinel-transport-simple-http.version>1.8.6</sentinel-transport-simple-http.version>
+        <spring-cloud-alibaba-sentinel-datasource.version>2022.0.0.0</spring-cloud-alibaba-sentinel-datasource.version>
+        <sentinel-datasource-nacos.version>1.8.6</sentinel-datasource-nacos.version>
+        <nacos-config-spring-boot-starter.version>0.2.12</nacos-config-spring-boot-starter.version>
 
         <sl4j-api.version>2.0.7</sl4j-api.version>
         <apm-toolkit-logback.version>8.16.0</apm-toolkit-logback.version>
@@ -246,6 +249,24 @@
                 <groupId>com.alibaba.csp</groupId>
                 <artifactId>sentinel-transport-simple-http</artifactId>
                 <version>${sentinel-transport-simple-http.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-sentinel-datasource</artifactId>
+                <version>${spring-cloud-alibaba-sentinel-datasource.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-datasource-nacos</artifactId>
+                <version>${sentinel-datasource-nacos.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-config-spring-boot-starter.version}</version>
             </dependency>
 
             <dependency>

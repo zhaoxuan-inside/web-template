@@ -1,7 +1,6 @@
 package org.zhaoxuan.data.biz.impl;
 
 import cn.hutool.core.lang.Snowflake;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class OrgBizImpl implements OrgBiz {
 
-    @Resource
-    private Snowflake snowflake;
+    private final Snowflake snowflake;
     private final OrgService orgService;
 
     @Override

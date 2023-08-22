@@ -3,7 +3,6 @@ package org.zhaoxuan.gateway.common.filter;
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.text.AntPathMatcher;
 import com.alibaba.fastjson.JSON;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
@@ -38,12 +37,9 @@ import java.util.function.Consumer;
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class AuthenticationFilter implements GlobalFilter, Ordered {
 
-    @Resource
-    private RedisAccessUtils redisUtil;
-    @Resource
-    private MessageUtils messageUtils;
-    @Resource
-    private Snowflake snowflake;
+    private final RedisAccessUtils redisUtil;
+    private final MessageUtils messageUtils;
+    private final Snowflake snowflake;
     private final SysParameterConfig sysConfig;
 
     @Override

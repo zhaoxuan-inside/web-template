@@ -1,6 +1,5 @@
 package org.zhaoxuan.user.biz.impl;
 
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -12,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.zhaoxuan.pojo.entity.user.OrgEntity;
 import org.zhaoxuan.pojo.request.PageParamRequest;
 import org.zhaoxuan.pojo.request.PageResponse;
-import org.zhaoxuan.pojo.request.user.*;
+import org.zhaoxuan.pojo.request.user.BatchRequest;
+import org.zhaoxuan.pojo.request.user.OrgRequest;
 import org.zhaoxuan.remote_call.feign.service.DataFeignService;
 import org.zhaoxuan.user.biz.OrgBiz;
 
@@ -24,8 +24,7 @@ import java.util.List;
 @ComponentScan(includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = FeignClient.class))
 public class OrgBizImpl implements OrgBiz {
 
-    @Resource
-    private DataFeignService dataFeignService;
+    private final DataFeignService dataFeignService;
 
     @Override
     public void addOrg(@RequestBody BatchRequest<OrgEntity> request) {

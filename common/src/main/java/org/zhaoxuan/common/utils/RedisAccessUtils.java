@@ -2,6 +2,7 @@ package org.zhaoxuan.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.*;
+import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.zhaoxuan.common.constants.RedisLogPatternConstants;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
+@Component
 @SuppressWarnings({"unused", "UnusedReturnValue"})
 public class RedisAccessUtils {
 

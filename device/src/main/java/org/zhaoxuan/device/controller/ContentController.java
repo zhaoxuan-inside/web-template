@@ -26,13 +26,13 @@ public class ContentController {
 
     }
 
-    @DeleteMapping()
+    @PutMapping()
     @Operation(description = "修改内容")
     public void modifyContent(@RequestBody AddContentRequest<Long> request) {
 
     }
 
-    @DeleteMapping()
+    @GetMapping()
     @Operation(description = "查询内容")
     public void addContent(@RequestBody GetContentRequest<Long> request) {
 

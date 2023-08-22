@@ -1,7 +1,6 @@
 package org.zhaoxuan.auth.biz.impl;
 
 import cn.hutool.core.lang.Snowflake;
-import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,16 +32,13 @@ import java.util.concurrent.TimeUnit;
 @ComponentScan(includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = FeignClient.class))
 public class AuthBizImpl implements AuthBiz {
 
-    private final HttpServletRequest httpServletRequest;
-
     @Value("${module.auth.verify-code-length}")
     private int verifyCodeLength;
-    @Resource
-    private RedisAccessUtils redisAccessUtils;
-    @Resource
-    private Snowflake snowflake;
-    @Resource
-    private DataFeignService dataFeignService;
+
+    private final HttpServletRequest httpServletRequest;
+    private final RedisAccessUtils redisAccessUtils;
+    private final Snowflake snowflake;
+    private final DataFeignService dataFeignService;
 
     @Override
     public VerifyCodeResponse verifyCode() {
