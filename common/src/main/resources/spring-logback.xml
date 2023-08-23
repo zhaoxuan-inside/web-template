@@ -2,20 +2,27 @@
 <configuration scan="false">
 
     <springProperty scope="context" name="SERVICE_NAME" source="spring.application.name"/>
-    <springProperty scope="context" name="ROOT_PATH" source="log.base.path"/>
+    <property name="ROOT_PATH" value="${log.base.path:-.}"/>
     <property name="LOG_DIR" value="${SERVICE_NAME}"/>
-    <property name="LOG_PATTERN"
-              value="[%level] [%d{yyyy-MM-dd_HH:mm:ss.SSS}] TRACE_ID:[%X{tid}] [%thread] [%file:%line] - %msg%n"/>
     <property name="ALL_LOG_FILE_NAME" value="${SERVICE_NAME}"/>
 
+
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+    <property name="LOG_PATTERN"
+              value="[%level] [%clr(%d{yyyy-MM-dd_HH:mm:ss.SSS})] %clr(TRACE_ID:[%X{tid}]) [%thread] %clr([%file:%line]) - %msg%n"/>
+
     <appender name="LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${ALL_LOG_FILE_NAME}.log</file>
+        <file>${ROOT_PATH}/${LOG_DIR}/${ALL_LOG_FILE_NAME}.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${LOG_PATTERN}</pattern>
             <charset>utf-8</charset>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${ROOT_PATH}/${LOG_DIR}/${SERVICE_NAME}.%d{yyyy-MM-dd}.log%i</fileNamePattern>
+            <fileNamePattern>${ROOT_PATH}/${LOG_DIR}/${SERVICE_NAME}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <MaxHistory>30</MaxHistory>
             <maxFileSize>10mb</maxFileSize>
         </rollingPolicy>
@@ -33,7 +40,8 @@
         </encoder>
     </appender>
 
-    <appender name="SEND_TO_SKYWALKING" class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+    <appender name="SEND_TO_SKYWALKING"
+              class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
                 <Pattern>${LOG_PATTERN}</Pattern>
