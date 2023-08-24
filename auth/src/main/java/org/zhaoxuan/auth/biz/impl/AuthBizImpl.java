@@ -49,7 +49,7 @@ public class AuthBizImpl implements AuthBiz {
         redisAccessUtils.set(RedisKeyPrefixConstants.VERIFY_CODE_KEY_PREFIX + id,
                 randStr,
                 TimeConstants.ONE_MINUTE * 10,
-                TimeUnit.SECONDS);
+                TimeUnit.MICROSECONDS);
         return VerifyCodeResponse.builder()
                 .id(id)
                 .image(randStrBase64)
@@ -82,12 +82,12 @@ public class AuthBizImpl implements AuthBiz {
         redisAccessUtils.set(RedisKeyPrefixConstants.TOKEN_IDX_UID + headerBean.getFrom() + uid,
                 token,
                 TimeConstants.ONE_HOUR,
-                TimeUnit.SECONDS);
+                TimeUnit.MICROSECONDS);
 
         redisAccessUtils.set(RedisKeyPrefixConstants.UID_IDX_TOKEN + headerBean.getFrom() + token,
                 uid,
                 TimeConstants.ONE_HOUR,
-                TimeUnit.SECONDS);
+                TimeUnit.MICROSECONDS);
 
         return LoginResponse.builder().token(String.valueOf(token)).build();
 

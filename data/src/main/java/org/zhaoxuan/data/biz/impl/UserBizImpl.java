@@ -64,7 +64,7 @@ public class UserBizImpl implements UserBiz {
         redisAccessUtils.set(RedisKeyPrefixConstants.USER_ID_IDX_ACCOUNT + account,
                 id,
                 TimeConstants.ONE_DAY,
-                TimeUnit.SECONDS);
+                TimeUnit.MICROSECONDS);
 
         return id;
 
@@ -95,7 +95,7 @@ public class UserBizImpl implements UserBiz {
         boolean lock = systemLock.lock(key,
                 TimeConstants.ONE_SECOND * 3,
                 TimeConstants.ONE_SECOND * 5,
-                TimeUnit.SECONDS);
+                TimeUnit.MICROSECONDS);
         try {
             if (lock) {
                 UserOrgRoleInfo user = userService.getUserById(userId);
